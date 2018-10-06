@@ -22,8 +22,8 @@ public function dbconnect(){
 
 class empQueries{
 
-  public $user = 'admin' 
-  public $pass = 'pwuco18'
+  public $user = 'admin'
+  public $pass = ''
 
 
 

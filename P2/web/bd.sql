@@ -28,22 +28,22 @@ values (31075940, 'Alberto Nuñez Fernandez', 'Basicos', 'Jubilado','anfernandez
 insert into empleados
 values (45374737, 'Carolina Lopez Muriel', 'Basicos', 'Activo','karolop90@hotmail.com',5,'1964-11-12',643176224);
 insert into empleados
-values (30852845, 'Pablo Morales Raigan', 'Doctorado', 'Activo','morapa@telefonica.es',2,'1987-03-01',677534816);
+values (30852845, 'Pablo Morales Raigan', 'Doctorado', 'Activo','morapa@telefonica.es',2,'1987-03-03',677534816);
 insert into empleados
-values (45628436, 'Manuel Medina Alvarez', 'Superiores', 'Activo','manuelmedinalv@gmail.com',11,'1948-01-01',625826487);
+values (45628436, 'Manuel Medina Alvarez', 'Superiores', 'Activo','manuelmedinalv@gmail.com',11,'1948-01-06',625826487);
 insert into empleados
-values (31087814, 'Luisa Cano Vega', 'Ninguno', 'Activo','louisecave@yahoo.es',3,'05-06-81',645623736);
+values (31087814, 'Luisa Cano Vega', 'Ninguno', 'Activo','louisecave@yahoo.es',3,'1945-06-04',645623736);
 insert into empleados
-values (45657294, 'Alvaro Diaz Gomez', 'Basicos', 'Estudiante','alvadigo@ono.es',5,'29-08-99',757427827);
+values (45657294, 'Alvaro Diaz Gomez', 'Basicos', 'Estudiante','alvadigo@ono.es',5,'1955-08-05',757427827);
 insert into empleados
-values (08727847, 'Estrella Ortiz Mengual', 'Superiores', 'Jubilado','esomen@gmail.com',4,'23-01-53',611892544);
+values (08727847, 'Estrella Ortiz Mengual', 'Superiores', 'Jubilado','esomen@gmail.com',4,'1948-01-04',611892544);
 insert into empleados
-values (75648104, 'Hector Mendoza Hernandez', 'Doctorado', 'Parado','he2men@yahoo.es',1,'14-10-86',654264027);
+values (75648104, 'Hector Mendoza Hernandez', 'Doctorado', 'Parado','he2men@yahoo.es',1,'1482-10-10',654264027);
 insert into empleados
-values (80762946, 'Andres Carrasco Cruz', 'Basicos', 'Activo','andrescaracruz@yahoo.es',7,'11-09-92',699427546);
+values (80762946, 'Andres Carrasco Cruz', 'Basicos', 'Activo','andrescaracruz@yahoo.es',7,'1188-09-10',699427546);
 insert into empleados
-values (30559073, 'Lucia Hoyos Martin', 'Basicos', 'Parado','hoyosmalu@hotmail.com',9,'31-03-98',721988562);
+values (30559073, 'Lucia Hoyos Martin', 'Basicos', 'Parado','hoyosmalu@hotmail.com',9,'1378-03-04',721988562);
 insert into empleados
-values (30559074, 'Martin Hoyos Martin', 'Basicos', 'Activo','hoyosmama@hotmail.com',9,'01-03-96',721988563);
+values (30559074, 'Martin Hoyos Martin', 'Basicos', 'Activo','hoyosmama@hotmail.com',9,'1999-03-06',721988563);
 insert into empleados
-values (30559075, 'Jose Hoyos Martin', 'Superiores', 'Activo','hoyosmaj@hotmail.com',9,'22-01-93',721988560);
+values (30559075, 'Jose Hoyos Martin', 'Superiores', 'Activo','hoyosmaj@hotmail.com',9,'1998-01-01',721988560);
