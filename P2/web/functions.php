@@ -1,6 +1,3 @@
-
-
-
 <!--
   Documento para realizar la conexión a la base de datos de MySQL
   y los métodos correspondientes a la consulta de la tabla
@@ -10,15 +7,9 @@
 
 class empQueries{
 
-<<<<<<< HEAD
-  public $user = 'admin'
-  public $pass = ''
-
-=======
   public $user = "davidpw";
   public $pass = "";
   public $dbc;
->>>>>>> pr/1
 
   public function __construct(){  // Constructo de la clase empQueries()
     $this->dbc = $this->dbconnect();
