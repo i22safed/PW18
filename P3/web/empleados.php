@@ -63,6 +63,9 @@ echo "<h3 align=center> Listado completo de empleados </h3>
 
   echo "</table>"; // Cerramos la tabla (linea 33 - <table align="center"  ... )
 
+  echo "Intsertar usuario <a href='insertar.php'>aqui</a>" 
+
+
 ?>
 
   </body>
