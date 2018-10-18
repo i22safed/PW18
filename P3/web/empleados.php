@@ -51,7 +51,7 @@ echo "<h3 align=center> Listado completo de empleados </h3>
   // Mostramos todos y cada uno de los empleados
   foreach($emps as $emp){
 
-    $urlEmp = '/practicapw/empleados/detalles.php?dni=' . urlencode($emp["dni"]);
+    $urlEmp = 'detalles.php?dni=' . urlencode($emp["dni"]);
 
     echo "<tr align=left class=list>
       <td class=list>$emp[nombreCompleto]</td>

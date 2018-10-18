@@ -43,8 +43,6 @@ class empQueries{
 
   public function getEmp($dniEmp){
 
-    $empleado;
-    $query;
     $i = 0;
     $sentence = $this->dbc->prepare("SELECT * FROM empleados WHERE empleados.dni = '$dniEmp'");
     if($sentence->execute()){
@@ -55,6 +53,7 @@ class empQueries{
       return null;
     }
   }
+
 
 } // Fin empQueries()
 

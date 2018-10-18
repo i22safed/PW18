@@ -23,7 +23,7 @@
   // Conexión a la base de datos -----------------------------------------------
 
   // Realizamos la conexión a la base de datos
-  require_once('C:\xampp\htdocs\practicapw\functions.php');
+  require_once('functions.php');
   // Creamos un objeto para llamar a las consultas
   $qo = new empQueries();
   // Realizamos la conexión con la base de datos
@@ -55,9 +55,11 @@ echo "<h3 align=center> Detalles del empleado </h3>
   // Realizamos una petición para obtener un array con todos los empleados
   $emp = $qo->getEmp($dniEmp);
 
+  $rutaImagen = "./empleados/".$emp["imagen"];
+
   // Mostramos el empleado que posee el DNI = $dni
   echo "<tr align=left class=list>
-    <td class=list align=center><img src=$emp[imagen]></img></td>
+    <td class=list align=center><img src=$rutaImagen></img></td>
     <td class=list align=center>$emp[nombreCompleto]</td>
     <td class=list align=center>$emp[dni]</td>
     <td class=list align=center>$emp[fechaNacimiento]</td>
