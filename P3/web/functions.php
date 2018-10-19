@@ -55,6 +55,15 @@ class empQueries{
   }
 
 
+  public function guardarInfo(){
+
+
+      echo "Caca";
+
+  }
+
+
+
 } // Fin empQueries()
 
 ?>

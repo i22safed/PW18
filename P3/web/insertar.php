@@ -37,59 +37,66 @@
 ?>
 
 
-    <form>
-        <br>Nombre:<br>
-            <input type="text" name="nombre"><br>
-        <br>Apellidos:<br>
-            <input type="text" name="apellidos"><br>
-        <br>DNI<br>
-            <input type="text" name="apellidos"><br>
-        <!-- Foto:--> 
-        <br>Sexo<br>
-            <input type="radio" name="gender" value="male" checked> Male<br> 
-            <input type="radio" name="gender" value="female"> Female<br> 
-            <input type="radio" name="gender" value="other"> Other<br><br>
-            
-        <br>Estudios<br>
-        
-            <select id="idEstudios" name="idestudios">
-                <option value="1"> Ninguno </option>
-                <option value="2"> Basicos </option>
-                <option value="3"> Superiores </option>
-                <option value="4"> Doctorado </option>
-            </select><br><br>
+<!-- Comienzo del formulario para el registro de un usuario -->
 
-        <br>Certificaciones<br>
-            <input type="checkbox" name="cert1" value="Amazon"> Amazon<br> 
-            <input type="checkbox" name="cert2" value="Cisco"> Cisco<br>
-            <input type="checkbox" name="cert3" value="Linux"> Linux<br> 
-            <input type="checkbox" name="cert4" value="Java"> Java<br>
-            <input type="checkbox" name="cert5" value="PL/SQL"> PL/SQL<br> 
-            <input type="checkbox" name="cert6" value="La otra"> La otra<br>
-            <input type="checkbox" name="cert7" value="Y la que queda"> .. Y la que queda<br> 
-            
-
-        <br>Situación laboral<br>
-        
-        <select id="idEstado" name="idestado">
-                <option value="1"> Estudiante </option>
-                <option value="2"> Activo </option>
-                <option value="3"> Parado </option>
-                <option value="4"> Jubilado </option>
-            </select><br><br>
-
-        <br>Email <br>
-        <input type="text" name="correp"><br>
-        <br>Localidad<br>
-        <input type="text" name="localidad"><br>
-        <br>Fecha de nacimiento<br>
-        <input type="date" name="fechaNacimiento"><br>
-        <br>Telefono<br>
-        <input type="text" name="Telefono"><br>
+<form method="POST" action="guardarInsercion.php">
     
-    </form>
+    <br>Nombre:<br>
+        <input type="text" name="nombre"><br>
+    
+    <br>Apellidos:<br>
+        <input type="text" name="apellidos"><br>
+    
+    <br>DNI<br>
+        <input type="text" name="DNI"><br>
 
+    <br>Sexo<br>
+        <input type="radio" name="sexo" value="male" checked> Male<br> 
+        <input type="radio" name="sexo" value="female"> Female<br> 
+        <input type="radio" name="sexo" value="other"> Other<br><br>
+        
+    <br>Estudios<br>
+    
+        <select id="idEstudios" name="idestudios">
+            <option value="1"> Ninguno </option>
+            <option value="2"> Basicos </option>
+            <option value="3"> Superiores </option>
+            <option value="4"> Doctorado </option>
+        </select><br><br>
 
+    <br>Certificaciones<br>
+        <input type="checkbox" name="cert1" value="Amazon"> Amazon<br> 
+        <input type="checkbox" name="cert2" value="Cisco"> Cisco<br>
+        <input type="checkbox" name="cert3" value="Linux"> Linux<br> 
+        <input type="checkbox" name="cert4" value="Java"> Java<br>
+        <input type="checkbox" name="cert5" value="PL/SQL"> PL/SQL<br> 
+        <input type="checkbox" name="cert6" value="La otra"> La otra<br>
+        <input type="checkbox" name="cert7" value="Y la que queda"> .. Y la que queda<br> 
+        
+
+    <br>Situación laboral<br>
+    
+    <select id="idEstado" name="idestado">
+            <option value="1"> Estudiante </option>
+            <option value="2"> Activo </option>
+            <option value="3"> Parado </option>
+            <option value="4"> Jubilado </option>
+        </select><br><br>
+
+    <br>Email <br>
+    <input type="text" name="correp"><br>
+    <br>Localidad<br>
+    <input type="text" name="localidad"><br>
+    <br>Fecha de nacimiento<br>
+    <input type="date" name="fechaNacimiento"><br>
+    <br>Telefono<br>
+    <input type="text" name="Telefono"><br>
+
+    <input type="submit" value="Guardar"> 
+
+</form>
+
+    
 
   </body>
 </html>
