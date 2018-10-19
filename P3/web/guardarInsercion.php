@@ -1,15 +1,25 @@
 <?php
 
-	
+
+	echo "$_POST[DNI]"; // Debemos comprobar que el DNI no exista 
+
+
+	/** -------------------------------------------------------------------
+	 * Hay que crear la funcionalidad para poder agregar una foto de perfil 
+	 * --------------------------------------------------------------------
+	 */
+
 	$nombreCompleto = "$_POST[nombre]"." "."$_POST[apellidos]";
+
+	$sexo = "$_POST[sexo]";
+
+	echo "El sexo del pavo este es: ". $sexo . "<br>" ;
 	
-
-	echo "$_POST[DNI]";
-
-
+	$estudiosSuperiores = "$_POST[estudios]"; 
+	
+	echo "Los estudios del pavo este es: ". $estudiosSuperiores . "<br>" ;
 
 	// Transformamos  los checkbox en cadena para almacenarla en la base de datos
-
 	$cert = "cert";
 	$certificaciones = "";
 	$certInd = "";	
@@ -22,13 +32,10 @@
 		}
 	}
 
-	
-
-	
-	
-
-
-
-
+	$situacionLaboral="";
+	$email="";
+	$localidad="";
+	$fechaNacimiento="";
+	$telefono="";
 
 ?>

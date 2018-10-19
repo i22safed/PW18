@@ -8,7 +8,7 @@ create table empleados
 	nombreCompleto VARCHAR(64) not null,
 	sexo VARCHAR(16) not null,
 	estudiosSuperiores VARCHAR(16) not null,
-	certifications VARCHAR(7),
+	certificaciones VARCHAR(7),
 	situacionLaboral VARCHAR(16) not null,
 	email VARCHAR(32) not null,
 	localidad INT(3) not null,
@@ -46,11 +46,11 @@ values (75648104,'75648104.png','Hector Mendoza Hernandez','Hombre','Doctorado',
 insert into empleados
 values (80762946,'80762946.png','Andres Carrasco Cruz','Hombre','Basicos','0000000','Activo','andrescaracruz@yahoo.es',7,'11-09-92',699427546);
 insert into empleados
-values (30559073,'30559073.png','Lucia Hoyos Martin','Otro','Basicos','0000000','Parado','hoyosmalu@hotmail.com',9,'31-03-98',721988562);
+values (30559073,'30559073.png','Lucia Hoyos Martin','Otro','Basicos','0000000','Parado','hoyosmalu@hotmail.com',1,'31-03-98',721988562);
 insert into empleados
-values (30559074,'30559074.png','Martin Hoyos Martin','Hombre','Basicos','0000000','Activo','hoyosmama@hotmail.com',9,'01-03-96',721988563);
+values (30559074,'30559074.png','Martin Hoyos Martin','Hombre','Basicos','0000000','Activo','hoyosmama@hotmail.com',4,'01-03-96',721988563);
 insert into empleados
-values (30559075,'30559075.png','Jose Hoyos Martin','Hombre','Superiores','0000000','Activo','hoyosmaj@hotmail.com',9,'22-01-93',721988560);
+values (30559075,'30559075.png','Jose Hoyos Martin','Hombre','Superiores','0000000','Activo','hoyosmaj@hotmail.com',3,'22-01-93',721988560);
 
 
 
