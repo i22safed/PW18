@@ -1,22 +1,34 @@
 <?php
 
-	require("functions.php");
+	
+	$nombreCompleto = "$_POST[nombre]"." "."$_POST[apellidos]";
+	
+
+	echo "$_POST[DNI]";
 
 
-	if($_POST["aux"] == 0)
-	{
-		echo "Estamos haciendo un INSERT";
-		$sql = "INSERT INTO empleado (dni, nombre, apellidos, telefono, direccion, departamento, salario) 
-					VALUES ('$_POST[dni]', '$_POST[nombre]', '$_POST[apellidos]', '$_POST[telefono]', '$_POST[direccion]', '$_POST[departamento]', '$_POST[salario]');";
+
+	// Transformamos  los checkbox en cadena para almacenarla en la base de datos
+
+	$cert = "cert";
+	$certificaciones = "";
+	$certInd = "";	
+	for ($i = 0; $i <= 6; $i++) {
+		$certInd = $cert.$i;
+		if(isset($_POST[$certInd])){
+			$certificaciones = $certificaciones."1";
+		}else{
+			$certificaciones = $certificaciones."0";
+		}
 	}
 
+	
 
-	$resultado = $conn->query ($sql);
+	
+	
 
-	if (!$resultado)
-		die ("Operación en base de datos fallida: " . $conn->error);
 
-	$conn = null;
 
-	header ("Location: index.php");
+
+
 ?>

@@ -65,13 +65,13 @@
         </select><br><br>
 
     <br>Certificaciones<br>
-        <input type="checkbox" name="cert1" value="Amazon"> Amazon<br> 
-        <input type="checkbox" name="cert2" value="Cisco"> Cisco<br>
-        <input type="checkbox" name="cert3" value="Linux"> Linux<br> 
-        <input type="checkbox" name="cert4" value="Java"> Java<br>
-        <input type="checkbox" name="cert5" value="PL/SQL"> PL/SQL<br> 
-        <input type="checkbox" name="cert6" value="La otra"> La otra<br>
-        <input type="checkbox" name="cert7" value="Y la que queda"> .. Y la que queda<br> 
+        <input type="checkbox" name="cert0" value="Amazon">Amazon<br> 
+        <input type="checkbox" name="cert1" value="Cisco">Cisco<br>
+        <input type="checkbox" name="cert2" value="Linux">Linux<br> 
+        <input type="checkbox" name="cert3" value="Java">Java<br>
+        <input type="checkbox" name="cert4" value="PL/SQL">PL/SQL<br> 
+        <input type="checkbox" name="cert5" value="La otra">La otra<br>
+        <input type="checkbox" name="cert6" value="Y la que queda">..Y la que queda<br> 
         
 
     <br>Situación laboral<br>
@@ -84,7 +84,7 @@
         </select><br><br>
 
     <br>Email <br>
-    <input type="text" name="correp"><br>
+    <input type="text" name="correo"><br>
     <br>Localidad<br>
     <input type="text" name="localidad"><br>
     <br>Fecha de nacimiento<br>
@@ -93,6 +93,7 @@
     <input type="text" name="Telefono"><br>
 
     <input type="submit" value="Guardar"> 
+    
 
 </form>
 
