@@ -8,7 +8,7 @@ Haz una aplicación web sencilla utilizando únicamente HTML que permita mostrar
 La página home deberá mostrar una lista resumida de todos los empleados, permitiendo ver todos los datos detallados de un 
 empleado seleccionado en otra página.
 
-![](https://img.shields.io/badge/Progreso-0%25-lightgrey.svg)
+![](https://img.shields.io/badge/Progreso-100%25-brightgreen.svg)
 
 
 ### Practica 2. 
@@ -17,7 +17,7 @@ Haz una aplicación web similar a la de la práctica anterior, con la misma estr
 de navegación, pero en la que los datos de los empleados estén almacenados en una base de datos en lugar de estar en el 
 códigoH TML. Emplea PHP y MySQL.
 
-![](https://img.shields.io/badge/Progreso-0%25-lightgrey.svg)
+![](https://img.shields.io/badge/Progreso-100%25-brightgreen.svg)
 
 ### Practica 3.
 
@@ -25,7 +25,7 @@ Añade a la aplicación web las capacidades de inserción, modificación y borra
 la información sobre los empleados, sino también añadir nuevos empleados, modificar sus datos y borrarlos a través de la 
 propia aplicación web.
 
-![](https://img.shields.io/badge/Progreso-0%25-lightgrey.svg)
+![](https://img.shields.io/badge/Progreso-23%25-orange.svg)
 
 ### Practica 4.
 
