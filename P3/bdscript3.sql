@@ -34,23 +34,23 @@ values (45374737,'45374737.png','Carolina Lopez Muriel','Mujer','Basicos','00000
 insert into empleados
 values (30852845,'30852845.png','Pablo Morales Raigan','Hombre','Doctorado','0000000','Activo','morapa@telefonica.es',2,'1987-03-01',677534816);
 insert into empleados
-values (45628436,'45628436.png','Manuel Medina Alvarez','Hombre','Superiores','0000000','Activo','manuelmedinalv@gmail.com',11,'1948-01-01',625826487);
+values (45628436,'45628436.png','Manuel Medina Alvarez','Hombre','Superiores','0000000','Activo','manuelmedinalv@gmail.com',3,'1948-01-01',625826487);
 insert into empleados
-values (31087814,'31087814.png','Luisa Cano Vega','Mujer','Ninguno','0000000','Activo','louisecave@yahoo.es',3,'05-06-81',645623736);
+values (31087814,'31087814.png','Luisa Cano Vega','Mujer','Ninguno','0000000','Activo','louisecave@yahoo.es',3,'1955-06-03',645623736);
 insert into empleados
-values (45657294,'45657294.png','Alvaro Diaz Gomez','Hombre','Basicos','0000000','Estudiante','alvadigo@ono.es',5,'29-08-99',757427827);
+values (45657294,'45657294.png','Alvaro Diaz Gomez','Hombre','Basicos','0000000','Estudiante','alvadigo@ono.es',5,'1929-08-19',757427827);
 insert into empleados
-values (18727847,'08727847.png','Estrella Ortiz Mengual','Otro','Superiores','0000000','Jubilado','esomen@gmail.com',4,'23-01-53',611892544);
+values (18727847,'08727847.png','Estrella Ortiz Mengual','Otro','Superiores','0000000','Jubilado','esomen@gmail.com',4,'1923-01-23',611892544);
 insert into empleados
-values (75648104,'75648104.png','Hector Mendoza Hernandez','Hombre','Doctorado','0000000','Parado','he2men@yahoo.es',1,'14-10-86',654264027);
+values (75648104,'75648104.png','Hector Mendoza Hernandez','Hombre','Doctorado','0000000','Parado','he2men@yahoo.es',1,'1914-10-16',654264027);
 insert into empleados
-values (80762946,'80762946.png','Andres Carrasco Cruz','Hombre','Basicos','0000000','Activo','andrescaracruz@yahoo.es',7,'11-09-92',699427546);
+values (80762946,'80762946.png','Andres Carrasco Cruz','Hombre','Basicos','0000000','Activo','andrescaracruz@yahoo.es',5,'1911-09-12',699427546);
 insert into empleados
-values (30559073,'30559073.png','Lucia Hoyos Martin','Otro','Basicos','0000000','Parado','hoyosmalu@hotmail.com',1,'31-03-98',721988562);
+values (30559073,'30559073.png','Lucia Hoyos Martin','Otro','Basicos','0000000','Parado','hoyosmalu@hotmail.com',1,'1931-03-18',721988562);
 insert into empleados
-values (30559074,'30559074.png','Martin Hoyos Martin','Hombre','Basicos','0000000','Activo','hoyosmama@hotmail.com',4,'01-03-96',721988563);
+values (30559074,'30559074.png','Martin Hoyos Martin','Hombre','Basicos','0000000','Activo','hoyosmama@hotmail.com',4,'1901-03-06',721988563);
 insert into empleados
-values (30559075,'30559075.png','Jose Hoyos Martin','Hombre','Superiores','0000000','Activo','hoyosmaj@hotmail.com',3,'22-01-93',721988560);
+values (30559075,'30559075.png','Jose Hoyos Martin','Hombre','Superiores','0000000','Activo','hoyosmaj@hotmail.com',3,'1922-01-03',721988560);
 
 
 
