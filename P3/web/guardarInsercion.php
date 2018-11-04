@@ -50,11 +50,54 @@
 		echo "<h3 align='center'>¡Error!: No se pudo establecer la conexión con la
 		base de datos.</h3><br/>";
 		die();
-	}else{
-		echo "La conexión a la base de datos puta madre";
 	}
 
+	// Condiciones para la insercion ----------------------------------------------------------
+	
+	// Que el campo del DNI no esté vacío
+	if(empty($dni)){
+		echo "El campo DNI no puede estar vacío";
+		return false;
+	}
+	// Que el DNI ya exista en la base de datos 
+	if($qo->checkDNI($dni) == false){
+		echo "El DNI ya existe en el sistema";
+		return false;
+	}
+	// Que el DNI sea incorrecto (numero de digitos)
+	if(strlen($dni) != 8){
+		echo "El DNI longitud del es incorrecta"; 
+		return false;
+	}
+	// Que el DNI contenga 8 caracteres pero tenga alguna letra
+	if(ctype_digit($dni)!=true && strlen($dni) == 8){
+		echo "El DNI contiene letras";
+		return false;
+	}
+	// Que no se especifique correo 
+	if(empty($email)){
+		echo "El campo email no puede estar vacío ";
+	}
+	// Que el correo ya exista 
+	if($qo->checkEmail($email) == false){
+		echo "El email ya existe en el sistema";
+		return false;
+	}
+	// Que la fecha sea mayor que la fecha actual 
+	if($qo->checkDate($fechaNacimiento) == true){
+		echo "<br>La fecha es correcta ";
+	}else{
+		echo "<br>La fecha es incorrecta ";
+	}	
+	// Que el telefono sea incorrecto (numero de digitos)
+	if($qo->checkPhoneNumber($telefono) == true){
+		echo "<br>El numero de telefono es correcto ";
+	}else{
+		echo "<br>El numero de telefono incorrecto ";
+	}	
+	
+	// Consulta SQL 
 	$qo->guardarInfo($dni, $imagen, $nombreCompleto, $sexo, $estudiosSuperiores,
 	$certificaciones, $situacionLaboral, $email, $localidad, $fechaNacimiento, $telefono);
-
+	 
 ?>

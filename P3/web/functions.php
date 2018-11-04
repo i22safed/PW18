@@ -41,7 +41,7 @@ class empQueries{
     return $empleados;
   }
 
-  public function getEmp($dniEmp){
+  public function getEmp($dniEmp){ // Observador de todos los empleados 
 
     $i = 0;
     $sentence = $this->dbc->prepare("SELECT * FROM empleados WHERE empleados.dni = '$dniEmp'");
@@ -55,9 +55,10 @@ class empQueries{
   }
 
 
+  // Inserción de empleados 
   public function guardarInfo($dni, $imagen, $nombreCompleto, $sexo, $estudiosSuperiores,
 	$certificaciones, $situacionLaboral, $email, $localidad, $fechaNacimiento, $telefono){
-
+ 
     $sentence = $this->dbc->prepare("INSERT INTO empleados (dni,
     imagen, nombreCompleto, sexo, estudiosSuperiores, certificaciones, 
     situacionLaboral, email, localidad, fechaNacimiento, telefono)
@@ -66,13 +67,122 @@ class empQueries{
     '$telefono');");
 
     if($sentence->execute()){
-      echo "Insertado el usuario: $nombreCompleto";
+      echo "<br>Insertado el usuario: $nombreCompleto";
       return true;
     }else{
       echo "<br>Error al insertar al usuario: $nombreCompleto";
       return null;
     }
+  } // Fin guardarInfo
+
+  
+  public function checkDNI($dni){   // Chequea si el DNI está en el sistema
+    
+    $sentence = $this->dbc->prepare("SELECT dni FROM empleados WHERE dni = '$dni';");
+    
+    if($sentence->execute()){
+      $userDNI = $sentence->fetch();
+      if(empty($userDNI)){
+        return true;
+      }else{
+        return false;
+      }
+    }else{
+      echo "Error al obtener el DNI";
+      return false;
+    }
+
+  } // Fin checkDNI
+
+  
+  public function checkEmail($email){   // Chequea el email está en el sistema 
+    
+    $sentence = $this->dbc->prepare("SELECT email FROM empleados WHERE email = '$email';");
+    
+    if($sentence->execute()){
+      $userEmail = $sentence->fetch();
+      if(empty($userEmail)){
+        return true;
+      }else{
+        return false;
+      }
+    }else{
+      echo "Error al obtener el email";
+      return false;
+    }
+  } // Fin checkEmail()
+
+  public function checkDate($fechaNacimiento){  // Chequea que una fecha de nacimiento 
+                                                // sea correcta 
+
+    $valores = explode('-', $fechaNacimiento);
+    $anio = (integer) $valores[0];
+    $mes = (integer) $valores[1];
+    $dia = (integer) $valores[2];
+    $checker = getdate();
+
+    // En caso de que sea un año anterior al actual retorna
+    // true directamente
+    if($anio < (integer) $checker['year']){
+      return true;
+    }
+    if($anio > (integer) $checker['year']){
+      return false;
+    }
+
+    // Para el caso de que sea el año actual (raro tener 
+    // con menos de un año)
+    if($anio == (integer) $checker['year']){
+
+      if($mes < (integer) $checker['mon']){
+        return true;
+      }
+      if($mes > (integer) $checker['mon']){
+        return false;
+      }
+      if($mes == (integer) $checker['mon']){
+        
+        if($dia > (integer) $checker['mday']){
+          return false;
+        }
+        if($dia < (integer) $checker['mday']){
+          return true;
+        }
+        if($dia == (integer) $checker['mday']){
+          return true;
+        }
+      }
+    }
+  } // Fin checkDate()
+
+  public function checkPhoneNumber($telefono){
+
+    $digitos = str_split($telefono);    
+
+    if(strlen($telefono) != 9){
+      echo "La longitud del telefono no es de 9";
+      return false;
+    }
+
+    // Comprobamos que empiece por 6, 7 o 9 
+
+    if((integer) $digitos[0] == 6 
+        || (integer) $digitos[0] == 7 
+        || (integer) $digitos[0] == 9){
+      
+    }else{
+      return false;
+    }
+
+    if(ctype_digit($telefono)!=true ){
+      echo "Retorna falso en letras en numero";
+      return false;
+    }
+    
+    return true;
+  
   }
+
 } // Fin empQueries()
 
 ?>
