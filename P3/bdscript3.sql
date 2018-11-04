@@ -26,7 +26,7 @@ values (44826745,'44826745.png','Pedro Jimenez Santos','Hombre','Basicos','00000
 insert into empleados
 values (30725352,'30725352.png','Marta Sanchez Rodriguez','Mujer','Ninguno','0000000','Parado','martita00@hotmail.com',1,'1987-01-05',654825492);
 insert into empleados
-values (45245264,'45245264.png','Ana María Expósito Escudero','Mujer','Superiores','0000000','Activo','expositoeam@yahoo.es',6,'1955-07-11',692547885);
+values (45245264,'45245264.png','Ana María Expósito Escudero','Mujer','Superiores','0000000','Activo','expositoeam@yahoo.es',5,'1955-07-11',692547885);
 insert into empleados
 values (31075940,'31075940.png','Alberto Nuñez Fernandez','Hombre','Basicos','0000000','Jubilado','anfernandez@outlook.com',1,'1948-05-10',666350983);
 insert into empleados
