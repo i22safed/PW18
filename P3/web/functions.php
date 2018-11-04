@@ -11,7 +11,7 @@ class empQueries{
   public $pass = "";
   public $dbc;
 
-  public function __construct(){  // Constructo de la clase empQueries()
+  public function __construct(){  // Constructor de la clase empQueries()
     $this->dbc = $this->dbconnect();
   }
 
@@ -55,15 +55,26 @@ class empQueries{
   }
 
 
-  public function guardarInfo(){
+  public function guardarInfo($dni, $imagen, $nombreCompleto, $sexo, $estudiosSuperiores,
+	$certificaciones, $situacionLaboral, $email, $localidad, $fechaNacimiento, $telefono){
 
+    $sentence = $this->dbc->prepare("INSERT INTO empleados (dni,
+    imagen, nombreCompleto, sexo, estudiosSuperiores, certificaciones, 
+    situacionLaboral, email, localidad, fechaNacimiento, telefono)
+    VALUES ('$dni', '$imagen', '$nombreCompleto', '$sexo', '$estudiosSuperiores',
+    '$certificaciones', '$situacionLaboral', '$email', '$localidad', '$fechaNacimiento', 
+    '$telefono');");
 
-      echo "Caca";
-
+    if($sentence->execute()){
+      echo "Insertado el usuario: $nombreCompleto";
+      return true;
+    }else{
+      echo "<br>Error al insertar al usuario: $nombreCompleto";
+      return null;
+    }
   }
-
-
-
 } // Fin empQueries()
 
 ?>
+
+

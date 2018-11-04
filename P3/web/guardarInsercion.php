@@ -1,25 +1,21 @@
 <?php
 
+	//dni INT(8) not null,
+	$dni = "$_POST[DNI]";
 
-	echo "$_POST[DNI]"; // Debemos comprobar que el DNI no exista 
+	//imagen VARCHAR(64),
+	$imagen = "$_POST[DNI]".".jpg";
 
-
-	/** -------------------------------------------------------------------
-	 * Hay que crear la funcionalidad para poder agregar una foto de perfil 
-	 * --------------------------------------------------------------------
-	 */
-
+	//nombreCompleto VARCHAR(64) not null,
 	$nombreCompleto = "$_POST[nombre]"." "."$_POST[apellidos]";
 
+	//sexo VARCHAR(16) not null,
 	$sexo = "$_POST[sexo]";
 
-	echo "El sexo del pavo este es: ". $sexo . "<br>" ;
-	
-	$estudiosSuperiores = "$_POST[estudios]"; 
-	
-	echo "Los estudios del pavo este es: ". $estudiosSuperiores . "<br>" ;
+	// estudiosSuperiores VARCHAR(16) not null,
+	$estudiosSuperiores = "$_POST[estudios]";
 
-	// Transformamos  los checkbox en cadena para almacenarla en la base de datos
+	//certificaciones VARCHAR(7),
 	$cert = "cert";
 	$certificaciones = "";
 	$certInd = "";	
@@ -32,10 +28,33 @@
 		}
 	}
 
-	$situacionLaboral="";
-	$email="";
-	$localidad="";
-	$fechaNacimiento="";
-	$telefono="";
+	// situacionLaboral VARCHAR(16) not null,
+	$situacionLaboral = "$_POST[sitLab]";
+
+	//email VARCHAR(32) not null,
+	$email = "$_POST[correo]";
+
+	//localidad INT(3) not null,
+	$localidad = "$_POST[localidad]";
+
+	//fechaNacimiento date not null,
+	$fechaNacimiento = "$_POST[fechaNacimiento]";
+
+	//telefono INT(14),
+	$telefono = "$_POST[telefono]";
+
+	require_once('functions.php');
+	$qo = new empQueries();
+
+	if(empty($qo->dbc)){
+		echo "<h3 align='center'>¡Error!: No se pudo establecer la conexión con la
+		base de datos.</h3><br/>";
+		die();
+	}else{
+		echo "La conexión a la base de datos puta madre";
+	}
+
+	$qo->guardarInfo($dni, $imagen, $nombreCompleto, $sexo, $estudiosSuperiores,
+	$certificaciones, $situacionLaboral, $email, $localidad, $fechaNacimiento, $telefono);
 
 ?>

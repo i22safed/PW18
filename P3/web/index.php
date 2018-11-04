@@ -5,7 +5,7 @@
     <!-- Para acentos y tildes -->
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <!--Establece el nombre la pestania-->
-  	<title>Pr&aacutectica 2 - Programaci&oacuten Web</title>
+  	<title>Pr&aacutectica 3 - Programaci&oacuten Web</title>
 
         <!-- Para utilizar Roboto como fuente del body
           <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
