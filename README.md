@@ -25,7 +25,7 @@ Añade a la aplicación web las capacidades de inserción, modificación y borra
 la información sobre los empleados, sino también añadir nuevos empleados, modificar sus datos y borrarlos a través de la 
 propia aplicación web.
 
-![](https://img.shields.io/badge/Progreso-23%25-orange.svg)
+![](https://img.shields.io/badge/Progreso-60%25-orange.svg)
 
 ### Practica 4.
 
