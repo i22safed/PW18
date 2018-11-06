@@ -77,6 +77,7 @@
 	// Que no se especifique correo 
 	if(empty($email)){
 		echo "El campo email no puede estar vacío ";
+		return false;
 	}
 	// Que el correo ya exista 
 	if($qo->checkEmail($email) == false){
@@ -88,19 +89,21 @@
 		echo "<br>La fecha es correcta ";
 	}else{
 		echo "<br>La fecha es incorrecta ";
+		return false;
 	}	
 	// Que el telefono sea incorrecto (numero de digitos)
 	if($qo->checkPhoneNumber($telefono) == true){
 		echo "<br>El numero de telefono es correcto ";
 	}else{
 		echo "<br>El numero de telefono incorrecto ";
+		return false;
 	}	
 	
 	// Consulta SQL 
 	
 	if($qo->guardarInfo($dni, $imagen, $nombreCompleto, $sexo, $estudiosSuperiores,
 	$certificaciones, $situacionLaboral, $email, $localidad, $fechaNacimiento, $telefono) == true){
-		sleep(3);
+		sleep(1);
 		header('Location: /practicapw/empleados.php');
 	}else{
 		echo "<br>Error en la insercion<br>";
