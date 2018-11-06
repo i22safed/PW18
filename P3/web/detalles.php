@@ -72,6 +72,9 @@ echo "<h3 align=center> Detalles del empleado </h3>
 
   echo "</table>"; // Cerramos la tabla (linea 33 - <table align="center"  ... )
 
+  // Añadir tambien celda con las certificaciones y la lógica correspondiente 
+
+
 ?>
 
   </body>

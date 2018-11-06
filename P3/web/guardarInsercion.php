@@ -97,7 +97,13 @@
 	}	
 	
 	// Consulta SQL 
-	$qo->guardarInfo($dni, $imagen, $nombreCompleto, $sexo, $estudiosSuperiores,
-	$certificaciones, $situacionLaboral, $email, $localidad, $fechaNacimiento, $telefono);
+	
+	if($qo->guardarInfo($dni, $imagen, $nombreCompleto, $sexo, $estudiosSuperiores,
+	$certificaciones, $situacionLaboral, $email, $localidad, $fechaNacimiento, $telefono) == true){
+		sleep(3);
+		header('Location: /practicapw/empleados.php');
+	}else{
+		echo "<br>Error en la insercion<br>";
+	}
 	 
 ?>

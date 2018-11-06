@@ -52,12 +52,16 @@ echo "<h3 align=center> Listado completo de empleados </h3>
   foreach($emps as $emp){
 
     $urlEmp = 'detalles.php?dni=' . urlencode($emp["dni"]);
+    $urlEmpDel = 'confirmarEliminacion.php?dni=' . urlencode($emp["dni"]);
 
     echo "<tr align=left class=list>
       <td class=list>$emp[nombreCompleto]</td>
       <td class=list>$emp[dni]</td>
       <td class=list>$emp[email]</td>
-      <td class=list align=center><a href=$urlEmp>+ info</a></td>
+      <td class=list align=center>
+          <a href=$urlEmp>+ info</a>
+          <a href=$urlEmpDel>Eliminar</a>
+      </td>
     </tr>";
   }
 

@@ -50,7 +50,7 @@ class empQueries{
       return $emp;
     }else{
       echo "Error al cargar al usuario con DNI: $dniEmp";
-      return null;
+      return false;
     }
   }
 
@@ -71,7 +71,7 @@ class empQueries{
       return true;
     }else{
       echo "<br>Error al insertar al usuario: $nombreCompleto";
-      return null;
+      return false;
     }
   } // Fin guardarInfo
 
@@ -183,8 +183,24 @@ class empQueries{
   
   }
 
+  public function deleteEmp($dni){
+
+    $sentence = $this->dbc->prepare("DELETE FROM empleados WHERE dni = $dni;");
+    
+    if($sentence->execute() == true){
+      return true;
+    }else{
+      return false;
+    }
+
+  }
+
+
+
 } // Fin empQueries()
 
 ?>
+
+
 
 
