@@ -28,7 +28,7 @@
             <input type="text" name="apellidos"><br>
         
         <br>DNI<br>
-            <input type="text" name="DNI"><br>
+            <input type="text" maxlength="8" name="DNI"><br>
 
         <br>Sexo<br>
             <input type="radio" name="sexo" value="Hombre" checked> Male<br> 

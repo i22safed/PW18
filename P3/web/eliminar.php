@@ -15,11 +15,6 @@
         base de datos.</h3><br/>";
         die();
         }
-    
-        if($qo->dniEmp($dni == false)){
-            echo "Error al borrar al usuario. DNI incorrecto";
-            return false;
-        }
 
         if($qo->deleteEmp($dni) == true){
             echo "El usuario se ha borrado del sistema<br>";

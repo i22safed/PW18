@@ -53,6 +53,7 @@ echo "<h3 align=center> Listado completo de empleados </h3>
 
     $urlEmp = 'detalles.php?dni=' . urlencode($emp["dni"]);
     $urlEmpDel = 'confirmarEliminacion.php?dni=' . urlencode($emp["dni"]);
+    $urlEmpEd = 'editar.php?dni=' . urlencode($emp["dni"]);
 
     echo "<tr align=left class=list>
       <td class=list>$emp[nombreCompleto]</td>
@@ -61,6 +62,7 @@ echo "<h3 align=center> Listado completo de empleados </h3>
       <td class=list align=center>
           <a href=$urlEmp>+ info</a>
           <a href=$urlEmpDel>Eliminar</a>
+          <a href=$urlEmpEd>Editar</a>
       </td>
     </tr>";
   }

@@ -192,10 +192,37 @@ class empQueries{
     }else{
       return false;
     }
-
   }
 
+  public function checkValues($name,$value,$emp){
 
+    // FALTA POR PONER LAS CONDICIONES PARA QUE ENTRE EN CADA UNO DE LOS CASOS
+
+    // Comprobamos cada una de las variables de multiples opciones para ver 
+    // lo que tenemos que chequear  en el formulario 
+
+    // - Sexo     
+
+    if((strcmp($name,'sexo')==0) && (strcmp($value,$emp['sexo'])==0)){
+      return 'checked';
+    }
+    if((strcmp($name,'sexo')==0) && (strcmp($value,$emp['sexo'])==0)){
+      return 'checked';
+    }
+    if((strcmp($name,'sexo')==0) && (strcmp($value,$emp['sexo'])==0)){
+      return 'checked';
+    }
+
+
+
+    // - Estudios   
+    // - Certificaciones     
+    // - Situacion laboral    
+    // - Localidad
+
+
+
+  } // Fin checkValues()
 
 } // Fin empQueries()
 

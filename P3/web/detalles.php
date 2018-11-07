@@ -44,6 +44,7 @@ echo "<h3 align=center> Detalles del empleado </h3>
         <th class=list>Foto perfil</th>
         <th class=list>Nombre </th>
         <th class=list>DNI </th>
+        <th class=list>Sexo </th>
         <th class=list>Fecha nacimiento </th>
         <th class=list>Localidad </th>
         <th class=list>Telefono </th>
@@ -62,6 +63,7 @@ echo "<h3 align=center> Detalles del empleado </h3>
     <td class=list align=center><img src=$rutaImagen></img></td>
     <td class=list align=center>$emp[nombreCompleto]</td>
     <td class=list align=center>$emp[dni]</td>
+    <td class=list align=center>$emp[sexo]</td>
     <td class=list align=center>$emp[fechaNacimiento]</td>
     <td class=list align=center>$emp[localidad]</td>
     <td class=list align=center>$emp[telefono]</td>
