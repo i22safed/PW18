@@ -50,6 +50,7 @@ echo "<h3 align=center> Detalles del empleado </h3>
         <th class=list>Telefono </th>
         <th class=list>Email </th>
         <th class=list>Estudios superiores</th>
+        <th class=list>Certificaciones</th>
         <th class=list>Situación laboral </th>
       </tr>";
 
@@ -69,6 +70,7 @@ echo "<h3 align=center> Detalles del empleado </h3>
     <td class=list align=center>$emp[telefono]</td>
     <td class=list align=center>$emp[email]</td>
     <td class=list align=center>$emp[estudiosSuperiores]</td>
+    <td class=list align=center>$emp[certificaciones]</td>
     <td class=list align=center >$emp[situacionLaboral]</td>
   </tr>";
 

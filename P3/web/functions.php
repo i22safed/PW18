@@ -202,7 +202,6 @@ class empQueries{
     // lo que tenemos que chequear  en el formulario 
 
     // - Sexo     
-
     if((strcmp($name,'sexo')==0) && (strcmp($value,$emp['sexo'])==0)){
       return 'checked';
     }
@@ -212,13 +211,76 @@ class empQueries{
     if((strcmp($name,'sexo')==0) && (strcmp($value,$emp['sexo'])==0)){
       return 'checked';
     }
+    // - Estudios 
+    
+    if((strcmp($name,'estudios')==0) && (strcmp($value,$emp['estudiosSuperiores'])==0)){
+      return 'selected';
+    }
+    if((strcmp($name,'estudios')==0) && (strcmp($value,$emp['estudiosSuperiores'])==0)){
+      return 'selected';
+    }
+    if((strcmp($name,'estudios')==0) && (strcmp($value,$emp['estudiosSuperiores'])==0)){
+      return 'selected';
+    }
+    if((strcmp($name,'estudios')==0) && (strcmp($value,$emp['estudiosSuperiores'])==0)){
+      return 'selected';
+    }
+    
+    $arrayCert = str_split($emp['certificaciones']);
 
+    // - Certificaciones  
+    if((strcmp($name,'cert0')==0) && (strcmp($value,$arrayCert[0])==0)){
+      return 'checked';
+    }
+    if((strcmp($name,'cert1')==0) && (strcmp($value,$arrayCert[1])==0)){
+      return 'checked';
+    }
+    if((strcmp($name,'cert2')==0) && (strcmp($value,$arrayCert[2])==0)){
+      return 'checked';
+    }
+    if((strcmp($name,'cert3')==0) && (strcmp($value,$arrayCert[3])==0)){
+      return 'checked';
+    }
+    if((strcmp($name,'cert4')==0) && (strcmp($value,$arrayCert[4])==0)){
+      return 'checked';
+    }
+    if((strcmp($name,'cert5')==0) && (strcmp($value,$arrayCert[5])==0)){
+      return 'checked';
+    }
+    if((strcmp($name,'cert6')==0) && (strcmp($value,$arrayCert[6])==0)){
+      return 'checked';
+    }
+  
+    // - Situacion Laboral
+    if((strcmp($name,'sitLab')==0) && (strcmp($value,$emp['situacionLaboral'])==0)){
+      return 'selected';
+    }
+    if((strcmp($name,'sitLab')==0) && (strcmp($value,$emp['situacionLaboral'])==0)){
+      return 'selected';
+    }
+    if((strcmp($name,'sitLab')==0) && (strcmp($value,$emp['situacionLaboral'])==0)){
+      return 'selected';
+    }
+    if((strcmp($name,'sitLab')==0) && (strcmp($value,$emp['situacionLaboral'])==0)){
+      return 'selected';
+    }
 
-
-    // - Estudios   
-    // - Certificaciones     
-    // - Situacion laboral    
     // - Localidad
+    if((strcmp($name,'localidad')==0) && ($value==$emp['localidad'])){
+      return 'selected';
+    }
+    if((strcmp($name,'localidad')==0) && ($value==$emp['localidad'])){
+      return 'selected';
+    }
+    if((strcmp($name,'localidad')==0) && ($value==$emp['localidad'])){
+      return 'selected';
+    }
+    if((strcmp($name,'localidad')==0) && ($value==$emp['localidad'])){
+      return 'selected';
+    }
+    if((strcmp($name,'localidad')==0) && ($value==$emp['localidad'])){
+      return 'selected';
+    }
 
 
 

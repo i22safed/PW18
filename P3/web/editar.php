@@ -13,12 +13,12 @@
     base de datos.</h3><br/>";
     die();
     }
-    
+
     $emp = $qo->getEmp($dni);
 
 ?>
 
-<form>
+<form method="POST" action="guardarInsercion">
 
     <br>Nombre:<br>
         <input type="text" name="nombre" value="<?php echo $emp['nombreCompleto']?>" ><br>   
@@ -33,27 +33,27 @@
     
     <br>Estudios<br>
         <select name="estudios">
-            <option value="Ninguno"> Ninguno </option>
-            <option value="Basicos" selected> Basicos </option>
-            <option value="Superiores"> Superiores </option>
-            <option value="Doctorado"> Doctorado </option>
+            <option value="Ninguno" <?php echo $qo->checkValues('estudios','Ninguno',$emp) ?>> Ninguno </option>
+            <option value="Basicos" <?php echo $qo->checkValues('estudios','Basicos',$emp) ?>> Basicos </option>
+            <option value="Superiores" <?php echo $qo->checkValues('estudios','Superiores',$emp) ?>> Superiores </option>
+            <option value="Doctorado" <?php echo $qo->checkValues('estudios','Doctorado',$emp) ?>> Doctorado </option>
         </select><br><br>
     
     <br>Certificaciones<br>
-        <input type="checkbox" name="cert0" >Amazon<br> 
-        <input type="checkbox" name="cert1" >Cisco<br>
-        <input type="checkbox" name="cert2" >Linux<br> 
-        <input type="checkbox" name="cert3" >Java<br>
-        <input type="checkbox" name="cert4" >PL/SQL<br> 
-        <input type="checkbox" name="cert5" >La otra<br>
-        <input type="checkbox" name="cert6" >..Y la que queda<br> 
+        <input type="checkbox" name="cert0" <?php echo $qo->checkValues('cert0','1',$emp) ?>>Amazon<br> 
+        <input type="checkbox" name="cert1" <?php echo $qo->checkValues('cert1','1',$emp) ?>>Cisco<br>
+        <input type="checkbox" name="cert2" <?php echo $qo->checkValues('cert2','1',$emp) ?>>Linux<br> 
+        <input type="checkbox" name="cert3" <?php echo $qo->checkValues('cert3','1',$emp) ?>>Java<br>
+        <input type="checkbox" name="cert4" <?php echo $qo->checkValues('cert4','1',$emp) ?>>PL/SQL<br> 
+        <input type="checkbox" name="cert5" <?php echo $qo->checkValues('cert5','1',$emp) ?>>La otra<br>
+        <input type="checkbox" name="cert6" <?php echo $qo->checkValues('cert6','1',$emp) ?>>..Y la que queda<br> 
     
     <br>Situación laboral<br>
     <select name="sitLab">
-            <option value="Estudiante"> Estudiante </option>
-            <option value="Activo"> Activo </option>
-            <option value="Parado"> Parado </option>
-            <option value="Jubilado"> Jubilado </option>
+            <option value="Estudiante" <?php echo $qo->checkValues('sitLab','Estudiante',$emp) ?>> Estudiante </option>
+            <option value="Activo" <?php echo $qo->checkValues('sitLab','Activo',$emp) ?>> Activo </option>
+            <option value="Parado" <?php echo $qo->checkValues('sitLab','Parado',$emp) ?>> Parado </option>
+            <option value="Jubilado" <?php echo $qo->checkValues('sitLab','Jubilado',$emp) ?>> Jubilado </option>
     </select><br><br>
     
     <br>Email <br>
@@ -61,11 +61,11 @@
     
     <br>Localidad<br>
     <select name="localidad">
-            <option value="1"> Almeria </option>
-            <option value="2"> Cadiz </option>
-            <option value="3"> Cordoba </option>
-            <option value="4"> Granada </option>
-            <option value="5"> Sevilla </option>
+            <option value="1" <?php echo $qo->checkValues('localidad',1,$emp) ?>> Almeria </option>
+            <option value="2" <?php echo $qo->checkValues('localidad',2,$emp) ?>> Cadiz </option>
+            <option value="3" <?php echo $qo->checkValues('localidad',3,$emp) ?>> Cordoba </option>
+            <option value="4" <?php echo $qo->checkValues('localidad',4,$emp) ?>> Granada </option>
+            <option value="5" <?php echo $qo->checkValues('localidad',5,$emp) ?>> Sevilla </option>
     </select><br><br>
     
     <br>Fecha de nacimiento<br>
@@ -74,7 +74,7 @@
     <br>Telefono<br>
     <input type="text" name="telefono" value = <?php echo $emp['telefono']?>><br>
     
-    
-
+    <input type="submit" value="Guardar"> 
+    <input type="reset" value="Restablecer">
 
 </form>
