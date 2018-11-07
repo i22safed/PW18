@@ -54,7 +54,6 @@ class empQueries{
     }
   }
 
-
   // Inserción de empleados 
   public function guardarInfo($dni, $imagen, $nombreCompleto, $sexo, $estudiosSuperiores,
 	$certificaciones, $situacionLaboral, $email, $localidad, $fechaNacimiento, $telefono){
@@ -205,23 +204,8 @@ class empQueries{
     if((strcmp($name,'sexo')==0) && (strcmp($value,$emp['sexo'])==0)){
       return 'checked';
     }
-    if((strcmp($name,'sexo')==0) && (strcmp($value,$emp['sexo'])==0)){
-      return 'checked';
-    }
-    if((strcmp($name,'sexo')==0) && (strcmp($value,$emp['sexo'])==0)){
-      return 'checked';
-    }
+
     // - Estudios 
-    
-    if((strcmp($name,'estudios')==0) && (strcmp($value,$emp['estudiosSuperiores'])==0)){
-      return 'selected';
-    }
-    if((strcmp($name,'estudios')==0) && (strcmp($value,$emp['estudiosSuperiores'])==0)){
-      return 'selected';
-    }
-    if((strcmp($name,'estudios')==0) && (strcmp($value,$emp['estudiosSuperiores'])==0)){
-      return 'selected';
-    }
     if((strcmp($name,'estudios')==0) && (strcmp($value,$emp['estudiosSuperiores'])==0)){
       return 'selected';
     }
@@ -255,32 +239,12 @@ class empQueries{
     if((strcmp($name,'sitLab')==0) && (strcmp($value,$emp['situacionLaboral'])==0)){
       return 'selected';
     }
-    if((strcmp($name,'sitLab')==0) && (strcmp($value,$emp['situacionLaboral'])==0)){
-      return 'selected';
-    }
-    if((strcmp($name,'sitLab')==0) && (strcmp($value,$emp['situacionLaboral'])==0)){
-      return 'selected';
-    }
-    if((strcmp($name,'sitLab')==0) && (strcmp($value,$emp['situacionLaboral'])==0)){
-      return 'selected';
-    }
 
     // - Localidad
     if((strcmp($name,'localidad')==0) && ($value==$emp['localidad'])){
       return 'selected';
     }
-    if((strcmp($name,'localidad')==0) && ($value==$emp['localidad'])){
-      return 'selected';
-    }
-    if((strcmp($name,'localidad')==0) && ($value==$emp['localidad'])){
-      return 'selected';
-    }
-    if((strcmp($name,'localidad')==0) && ($value==$emp['localidad'])){
-      return 'selected';
-    }
-    if((strcmp($name,'localidad')==0) && ($value==$emp['localidad'])){
-      return 'selected';
-    }
+
 
 
 
