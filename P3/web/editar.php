@@ -16,13 +16,34 @@
 
     $emp = $qo->getEmp($dni);
 
+    $nombreCom = $emp['nombreCompleto'];
+    $expName = explode(' ',$nombreCom);
+    $nEle = count($expName);
+    
+    if($nEle == 2){
+        $nombre = $expName[0];
+        $apellidos = $expName[1];
+    }
+    if($nEle == 3){
+        $nombre = $expName[0];
+        $apellidos = $expName[1].' '.$expName[2];
+    }
+    if($nEle == 4){
+        $nombre = $expName[0].' '.$expName[1];
+        $apellidos = $expName[2].' '.$expName[3];
+    }
+
 ?>
 
-<form method="POST" action="guardarInsercion">
+<form method="POST" action="guardarInsercion.php">
 
     <br>Nombre:<br>
-        <input type="text" name="nombre" value="<?php echo $emp['nombreCompleto']?>" ><br>   
+        <input type="text" name="nombre" value="<?php echo $nombre?>" ><br>   
     
+    <br>Apellidos:<br>
+        <input type="text" name="apellidos" value="<?php echo $apellidos?>" ><br>   
+
+
     <br>DNI<br>
         <input type="text" name="DNI" value="<?php echo "$emp[dni]" ?>" readonly><br>
     
@@ -74,7 +95,7 @@
     <br>Telefono<br>
     <input type="text" name="telefono" value = <?php echo $emp['telefono']?>><br>
     
-    <input type="submit" value="Guardar"> 
+    <input type="submit" name="edicion" value="Guardar"> 
     <input type="reset" value="Restablecer">
 
 </form>

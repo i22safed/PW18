@@ -80,7 +80,7 @@
         <br>Telefono<br>
         <input type="text" name="telefono"><br>
 
-        <input type="submit" value="Guardar"> 
+        <input type="submit" name="insertar" value="Registrar"> 
         <input type="reset" value="Restablecer">
 
     </form>

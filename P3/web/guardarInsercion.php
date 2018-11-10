@@ -1,5 +1,9 @@
 <?php
 
+	$opcion = "$_POST[edicion]";
+	echo "$opcion";
+
+
 	//dni INT(8) not null,
 	$dni = "$_POST[DNI]";
 
@@ -60,7 +64,7 @@
 		return false;
 	}
 	// Que el DNI ya exista en la base de datos 
-	if($qo->checkDNI($dni) == false){
+	if(($qo->checkDNI($dni) == false)&&(strcmp($opcion,'Registrar')==0)){
 		echo "El DNI ya existe en el sistema";
 		return false;
 	}
@@ -80,33 +84,44 @@
 		return false;
 	}
 	// Que el correo ya exista 
-	if($qo->checkEmail($email) == false){
+	if(($qo->checkEmail($email) == false)&&(strcmp($opcion,'Registrar')==0)){
 		echo "El email ya existe en el sistema";
 		return false;
 	}
 	// Que la fecha sea mayor que la fecha actual 
 	if($qo->checkDate($fechaNacimiento) == true){
-		echo "<br>La fecha es correcta ";
 	}else{
 		echo "<br>La fecha es incorrecta ";
 		return false;
 	}	
 	// Que el telefono sea incorrecto (numero de digitos)
 	if($qo->checkPhoneNumber($telefono) == true){
-		echo "<br>El numero de telefono es correcto ";
 	}else{
 		echo "<br>El numero de telefono incorrecto ";
 		return false;
 	}	
 	
 	// Consulta SQL 
-	
-	if($qo->guardarInfo($dni, $imagen, $nombreCompleto, $sexo, $estudiosSuperiores,
-	$certificaciones, $situacionLaboral, $email, $localidad, $fechaNacimiento, $telefono) == true){
-		sleep(1);
-		header('Location: /practicapw/empleados.php');
+
+	if(strcmp($opcion,'Registar')==0){
+
+		if($qo->guardarInfo($dni, $imagen, $nombreCompleto, $sexo, $estudiosSuperiores,
+		$certificaciones, $situacionLaboral, $email, $localidad, $fechaNacimiento, $telefono) == true){
+			sleep(1);
+			header('Location: /practicapw/empleados.php');
+		}else{
+			echo "<br>Error en el registro<br>";
+		}
+
 	}else{
-		echo "<br>Error en la insercion<br>";
+
+		if($qo->editarInfo($dni, $imagen, $nombreCompleto, $sexo, $estudiosSuperiores,
+		$certificaciones, $situacionLaboral, $email, $localidad, $fechaNacimiento, $telefono) == true){
+			sleep(1);
+			header('Location: /practicapw/empleados.php');
+		}else{
+			echo "<br>Error en la modificacion<br>";
+		}
 	}
-	 
+
 ?>

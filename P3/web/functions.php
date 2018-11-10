@@ -72,8 +72,41 @@ class empQueries{
       echo "<br>Error al insertar al usuario: $nombreCompleto";
       return false;
     }
-  } // Fin guardarInfo
+  } // Fin guardarInfo()
 
+  public function editarInfo($dni, $imagen, $nombreCompleto, $sexo, $estudiosSuperiores,
+	$certificaciones, $situacionLaboral, $email, $localidad, $fechaNacimiento, $telefono){
+ 
+    $sentence = $this->dbc->prepare("UPDATE empleados 
+    SET dni='$dni', imagen='$imagen', nombreCompleto='$nombreCompleto', sexo='$sexo', 
+    estudiosSuperiores='$estudiosSuperiores', certificaciones='$certificaciones', 
+    situacionLaboral='$situacionLaboral', email='$email', localidad='$localidad', 
+    fechaNacimiento='$fechaNacimiento', telefono='$telefono' 
+    WHERE dni = '$dni';");
+
+    if($sentence->execute()){
+      echo "<br>Modificado el usuario: $nombreCompleto";
+      return true;
+    }else{
+      echo "<br>Error al modificar al usuario: $nombreCompleto";
+      return false;
+    }
+  } // Fin editarInfo()
+
+  public function deleteEmp($dni){
+
+    $sentence = $this->dbc->prepare("DELETE FROM empleados WHERE dni = $dni;");
+    
+    if($sentence->execute() == true){
+      return true;
+    }else{
+      return false;
+    }
+  } // Fin deleteEmp()
+
+  // FIN DE FUNCIONES DE INSERCION, BORRADO Y MODIFICACION DE LOS DATOS Y 
+  // CONSULTA Y CONEXIÓN A LA BASE DE DATOS 
+  // ----------------------------------------------------------------------------------
   
   public function checkDNI($dni){   // Chequea si el DNI está en el sistema
     
@@ -182,17 +215,6 @@ class empQueries{
   
   }
 
-  public function deleteEmp($dni){
-
-    $sentence = $this->dbc->prepare("DELETE FROM empleados WHERE dni = $dni;");
-    
-    if($sentence->execute() == true){
-      return true;
-    }else{
-      return false;
-    }
-  }
-
   public function checkValues($name,$value,$emp){
 
     // FALTA POR PONER LAS CONDICIONES PARA QUE ENTRE EN CADA UNO DE LOS CASOS
@@ -244,9 +266,6 @@ class empQueries{
     if((strcmp($name,'localidad')==0) && ($value==$emp['localidad'])){
       return 'selected';
     }
-
-
-
 
   } // Fin checkValues()
 
