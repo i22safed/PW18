@@ -8,7 +8,7 @@
 	$dni = "$_POST[DNI]";
 
 	//imagen VARCHAR(64),
-	$imagen = "$_POST[DNI]".".jpg";
+	$imagen = "$_POST[DNI]".".png";
 
 	//nombreCompleto VARCHAR(64) not null,
 	$nombreCompleto = "$_POST[nombre]"." "."$_POST[apellidos]";

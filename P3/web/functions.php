@@ -269,6 +269,68 @@ class empQueries{
 
   } // Fin checkValues()
 
+  public function cert2array($certificaciones){
+
+    $certs = str_split($certificaciones);
+    $cadenaCerts = '';
+
+    // Para el caso de que no tenga ninguna certificación
+
+    if((strcmp($certs[0],'0')==0) && (strcmp($certs[1],'0')==0) 
+      && (strcmp($certs[2],'0')==0) && (strcmp($certs[3],'0')==0) 
+      && (strcmp($certs[4],'0')==0) && (strcmp($certs[5],'0')==0) 
+      && (strcmp($certs[6],'0')==0)){
+      
+        return 'Ninguna';
+      
+      }else{
+
+        if(strcmp($certs[0],'1')==0){
+          $cadenaCerts = $cadenaCerts . 'Amazon<br>';
+        } 
+        if(strcmp($certs[1],'1')==0){
+          $cadenaCerts = $cadenaCerts . 'Cisco<br>';
+        } 
+        if(strcmp($certs[2],'1')==0){
+          $cadenaCerts = $cadenaCerts . 'Linux<br>';
+        } 
+        if(strcmp($certs[3],'1')==0){
+          $cadenaCerts = $cadenaCerts . 'Java<br>';
+        }
+        if(strcmp($certs[4],'1')==0){
+          $cadenaCerts = $cadenaCerts . 'PL/SQL<br>';
+        }
+        if(strcmp($certs[5],'1')==0){
+          $cadenaCerts = $cadenaCerts . 'La Otra<br>';
+        }
+        if(strcmp($certs[6],'1')==0){
+          $cadenaCerts = $cadenaCerts . '..Y la que queda';
+        }
+         return $cadenaCerts;
+      }    
+  } // Fin de cert2Array()
+
+
+  public function loc2String($localidad){
+
+    if($localidad==1){
+      return 'Almeria';
+    }
+    if($localidad==2){
+      return 'Cadiz';
+    }
+    if($localidad==3){
+      return 'Cordoba';
+    }
+    if($localidad==4){
+      return 'Granada';
+    }
+    if($localidad==5){
+      return 'Sevilla';
+    }
+  } // Fin de loc2Array
+
+
 } // Fin empQueries()
 
 ?>

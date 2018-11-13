@@ -56,8 +56,13 @@ echo "<h3 align=center> Detalles del empleado </h3>
 
   // Realizamos una petición para obtener un array con todos los empleados
   $emp = $qo->getEmp($dniEmp);
+  
+  $cert = $qo->cert2Array($emp['certificaciones']);
+  $loc = $qo->loc2String($emp['localidad']);
 
   $rutaImagen = "./empleados/".$emp["imagen"];
+
+
 
   // Mostramos el empleado que posee el DNI = $dni
   echo "<tr align=left class=list>
@@ -66,11 +71,11 @@ echo "<h3 align=center> Detalles del empleado </h3>
     <td class=list align=center>$emp[dni]</td>
     <td class=list align=center>$emp[sexo]</td>
     <td class=list align=center>$emp[fechaNacimiento]</td>
-    <td class=list align=center>$emp[localidad]</td>
+    <td class=list align=center>$loc</td>
     <td class=list align=center>$emp[telefono]</td>
     <td class=list align=center>$emp[email]</td>
     <td class=list align=center>$emp[estudiosSuperiores]</td>
-    <td class=list align=center>$emp[certificaciones]</td>
+    <td class=list align=center>$cert</td>
     <td class=list align=center >$emp[situacionLaboral]</td>
   </tr>";
 
