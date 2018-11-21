@@ -24,10 +24,10 @@
 
     }else{
         
-        header('Location: /practicapw/empleados.php');
+        header('Location: /web/empleados.php');
     }
     
-    header('Location: /practicapw/empleados.php');
+    header('Location: /web/empleados.php');
 
 ?>
 

@@ -108,7 +108,7 @@
 		if($qo->guardarInfo($dni, $imagen, $nombreCompleto, $sexo, $estudiosSuperiores,
 		$certificaciones, $situacionLaboral, $email, $localidad, $fechaNacimiento, $telefono) == true){
 			sleep(1);
-			header('Location: /practicapw/empleados.php');
+			header('Location: /web/empleados.php');
 		}else{
 			echo "<br>Error en el registro<br>";
 		}
@@ -118,7 +118,7 @@
 		if($qo->editarInfo($dni, $imagen, $nombreCompleto, $sexo, $estudiosSuperiores,
 		$certificaciones, $situacionLaboral, $email, $localidad, $fechaNacimiento, $telefono) == true){
 			sleep(1);
-			header('Location: /practicapw/empleados.php');
+			header('Location: /web/empleados.php');
 		}else{
 			echo "<br>Error en la modificacion<br>";
 		}
