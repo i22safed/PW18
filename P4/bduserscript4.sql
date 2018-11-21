@@ -12,7 +12,7 @@ create table usuarios
 insert into usuarios
 values (78978977,'Administrador','1234','Admin');
 insert into usuarios
-values (98798777,'Moderador','1234','Moder');
+values (98798777,'Usuario','1234','User');
 insert into usuarios
 values (65465466,'Invitado','1234','Invi');
 
