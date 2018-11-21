@@ -37,7 +37,20 @@ sistemas, permitiendo que un visitante cree una cuenta de usuario yque los usuar
 contraseña) deberá almacenarse en la base de datos MySQL, usando algún tipo de encriptación que evite que las contraseñas
 sean directamente visibles en dicha base de datos.
 
-![](https://img.shields.io/badge/Progreso-0%25-lightgrey.svg)
+|Requisito | Cumplido |
+| --- | --- |
+| CSS está fuera del código php/html| ![](https://img.shields.io/badge/Estado-done-green.svg) |
+| Librería con código de acceso a la base de datos | ![](https://img.shields.io/badge/Estado-done-green.svg) |
+| Cada usuario tiene su propia foto se quitará | ![](https://img.shields.io/badge/Estado-done-green.svg) |
+| Web formateada | ![](https://img.shields.io/badge/Estado-done-green.svg) |
+| Multiples apertures y cierres de php (usar ```echo```)|![](https://img.shields.io/badge/Estado-done-green.svg)|
+| Funciones de insertar/modificar/borrar usuarios |![](https://img.shields.io/badge/Estado-done-green.svg)|
+| Tipo dentro de su respectivo campo | ![](https://img.shields.io/badge/Estado-done-green.svg) |
+| Multiples jerarquias de usuarios | ![](https://img.shields.io/badge/Estado-to--do-lightgrey.svg)|
+| Administrador puede borrar todos con solo un boton (botón rojo)|![](https://img.shields.io/badge/Estado-to--do-lightgrey.svg)|
+| Considerar tiempo máximo de sesión |![](https://img.shields.io/badge/Estado-to--do-lightgrey.svg)|
+| Permitir registro de usuarios |![](https://img.shields.io/badge/Estado-to--do-lightgrey.svg)|
+| Botón de ```logout``` |![](https://img.shields.io/badge/Estado-to--do-lightgrey.svg)|
 
 ### Practica 5. 
 
