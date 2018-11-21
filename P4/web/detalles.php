@@ -5,14 +5,14 @@
     <!-- Para tildes y acentos -->
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
   </head>
-  <body>
+  <body bgcolor="#CFE1D6">
 
   <!--Se centra el titulo y se concatena con la imagen de la casa,(permite
   volver al menu de inicio) posicionandola al lado derecho-->
     <h1 align="center" style="background-color:#263238 ; color:#C2C2C2">
       Empleado
       <right>
-        <a href="/practicapw/empleados.php">
+        <a href="/practica/empleados.php">
           <img src="/practicapw/pics/home.ico"></img>
         </a>
       </right>
@@ -39,20 +39,7 @@
 
   // Creamos la estructura que debe de tener la tabla
 echo "<h3 align=center> Detalles del empleado </h3>
-    <table align=center cellpadding=5 class=list style=margin: 0 auto;>
-      <tr align=left class=list>
-        <th class=list>Foto perfil</th>
-        <th class=list>Nombre </th>
-        <th class=list>DNI </th>
-        <th class=list>Sexo </th>
-        <th class=list>Fecha nacimiento </th>
-        <th class=list>Localidad </th>
-        <th class=list>Telefono </th>
-        <th class=list>Email </th>
-        <th class=list>Estudios superiores</th>
-        <th class=list>Certificaciones</th>
-        <th class=list>Situación laboral </th>
-      </tr>";
+    <table  align=center cellpadding=8 cellspacing=2 bgcolor=#D3D3D4 class=list style=margin: 0 auto;>"; 
 
   // Realizamos una petición para obtener un array con todos los empleados
   $emp = $qo->getEmp($dniEmp);
@@ -65,18 +52,21 @@ echo "<h3 align=center> Detalles del empleado </h3>
 
 
   // Mostramos el empleado que posee el DNI = $dni
-  echo "<tr align=left class=list>
-    <td class=list align=center><img src=$rutaImagen></img></td>
-    <td class=list align=center>$emp[nombreCompleto]</td>
-    <td class=list align=center>$emp[dni]</td>
-    <td class=list align=center>$emp[sexo]</td>
-    <td class=list align=center>$emp[fechaNacimiento]</td>
-    <td class=list align=center>$loc</td>
-    <td class=list align=center>$emp[telefono]</td>
-    <td class=list align=center>$emp[email]</td>
-    <td class=list align=center>$emp[estudiosSuperiores]</td>
-    <td class=list align=center>$cert</td>
-    <td class=list align=center >$emp[situacionLaboral]</td>
+  echo "<tr>
+    <td bgcolor=#D3D3D4 class=list align=center><img src=$rutaImagen width=150 height=150></img></td>
+    <td bgcolor=#D3D3D4 class=list align=center>
+    <ul align=left>
+      <li> Nombre completo: $emp[nombreCompleto]</li>
+      <li>DNI: $emp[dni]</li>
+      <li>Sexo: $emp[sexo]</li>
+      <li>Fecha de nacimiento: $emp[fechaNacimiento]</li>
+      <li>Localidad: $loc</li>
+      <li>Telefono: $emp[telefono]</li>
+      <li>E-mail: $emp[email]</li>
+      <li>Estudios Superiores: $emp[estudiosSuperiores]</li>
+      <li>Certificaciones: $cert</li>
+      <li>Situacion Laboral: $emp[situacionLaboral]</li>
+    </ul>
   </tr>";
 
   echo "</table>"; // Cerramos la tabla (linea 33 - <table align="center"  ... )

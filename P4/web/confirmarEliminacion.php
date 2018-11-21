@@ -1,12 +1,30 @@
 
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>Eliminar empleado</title>
+    <!-- Para tildes y acentos -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  </head>
+  <body bgcolor="#CFE1D6">
+
+<h1 align="center" style="background-color:#263238 ; color:#C2C2C2">
+        Eliminación del empleado
+        <right>
+            <a href="/practicapw/empleados.php">
+            <img src="/practicapw/pics/home.ico"></img>
+            </a>
+        </right>
+        </h1>
 
 <form method="POST" action="eliminar.php">
-
-    Introduzca de nuevo el DNI para confirmar el borrado<br>
-    <input type="text" name="dni" value=<?php echo "$_GET[dni]" ?>> 
-    <br>
-    <input type="submit" name="opcion" value="Eliminar"> 
-    <input type="submit" name="opcion" value="Cancelar"> 
-    
+<table align=center cellpadding="8" cellspacing="2" bgcolor="#BBD4C4">
+    <tr> <caption> ¿Es correcto el dni del empleado que desea borrar? </caption> </tr>
+    <td> <input type="text" name="dni" value=<?php echo "$_GET[dni]" ?>> </td>
+    <tr>
+    	<td  bgcolor="#FFFFFF"> <input type="submit" name="opcion" value="Eliminar"> </td>
+    	<td  bgcolor="#FFFFFF"> <input type="submit" name="opcion" value="Cancelar"> </td>
+    </tr>
+</table>    
 
 </form>

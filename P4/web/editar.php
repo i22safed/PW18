@@ -1,5 +1,20 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>Editar empleado</title>
+    <!-- Para tildes y acentos -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  </head>
+  <body bgcolor="#CFE1D6">
 
-
+<h1 align="center" style="background-color:#263238 ; color:#C2C2C2">
+        Datos del empleado
+        <right>
+            <a href="/practicapw/empleados.php">
+            <img src="/practicapw/pics/home.ico"></img>
+            </a>
+        </right>
+        </h1>
 
 <?php
 
@@ -13,10 +28,10 @@
     base de datos.</h3><br/>";
     die();
     }
-
+    
     $emp = $qo->getEmp($dni);
 
-    $nombreCom = $emp['nombreCompleto'];
+ $nombreCom = $emp['nombreCompleto'];
     $expName = explode(' ',$nombreCom);
     $nEle = count($expName);
     
@@ -35,67 +50,115 @@
 
 ?>
 
-<form method="POST" action="guardarInsercion.php">
+<form method="POST" action="guardarInsercion.php" align=center bgcolor=blue>
+   <table align=center cellpadding="5" cellspacing="1" bgcolor="#BBD4C4">
 
-    <br>Nombre:<br>
-        <input type="text" name="nombre" value="<?php echo $nombre?>" ><br>   
-    
-    <br>Apellidos:<br>
-        <input type="text" name="apellidos" value="<?php echo $apellidos?>" ><br>   
+    <tr>
+        <td>
+            Nombre:
+        </td>
+        <td>
+            <input type="text" name="nombre" value="<?php echo $emp['nombreCompleto']?>" >   
+        </td>
+    </tr>
 
-
-    <br>DNI<br>
-        <input type="text" name="DNI" value="<?php echo "$emp[dni]" ?>" readonly><br>
+    <tr>
+        <td>
+            DNI
+        </td>
+        <td>
+        <input type="text" name="DNI" value="<?php echo "$emp[dni]" ?>" readonly>
+        </td>
+    </tr>
     
-    <br>Sexo<br>
-        <input type="radio" name="sexo" value="Hombre" <?php echo $qo->checkValues('sexo','Hombre',$emp) ?> > Hombre<br> 
-        <input type="radio" name="sexo" value="Mujer" <?php echo $qo->checkValues('sexo','Mujer',$emp) ?> > Mujer<br> 
-        <input type="radio" name="sexo" value="Otro" <?php echo $qo->checkValues('sexo','Otro',$emp) ?> > Otro<br><br>
+    <tr> <td> Sexo </td> 
+        <td>
+            <table align=center cellpadding="8" cellspacing="2" bgcolor="#BBD4C4">
+            <tr> 
+                <td bgcolor="#F2F3F4"> <input type="radio" name="sexo" value="Hombre" <?php echo $qo->checkValues('sexo','Hombre',$emp) ?> > Hombre </td>
+                <td bgcolor="#F2F3F4"> <input type="radio" name="sexo" value="Mujer" <?php echo $qo->checkValues('sexo','Mujer',$emp) ?> > Mujer </td>
+                <td bgcolor="#F2F3F4"> <input type="radio" name="sexo" value="Otro"  <?php echo $qo->checkValues('sexo','Otro',$emp) ?> > Otro </td> 
+            </tr>
+            </table>
+        </td>
+    </tr>
+   
     
-    <br>Estudios<br>
+    <tr> <td> Estudios </td>
+        <td>
         <select name="estudios">
             <option value="Ninguno" <?php echo $qo->checkValues('estudios','Ninguno',$emp) ?>> Ninguno </option>
             <option value="Basicos" <?php echo $qo->checkValues('estudios','Basicos',$emp) ?>> Basicos </option>
             <option value="Superiores" <?php echo $qo->checkValues('estudios','Superiores',$emp) ?>> Superiores </option>
             <option value="Doctorado" <?php echo $qo->checkValues('estudios','Doctorado',$emp) ?>> Doctorado </option>
-        </select><br><br>
+        </select>
+        </td>
+    </tr>
     
-    <br>Certificaciones<br>
-        <input type="checkbox" name="cert0" <?php echo $qo->checkValues('cert0','1',$emp) ?>>Amazon<br> 
-        <input type="checkbox" name="cert1" <?php echo $qo->checkValues('cert1','1',$emp) ?>>Cisco<br>
-        <input type="checkbox" name="cert2" <?php echo $qo->checkValues('cert2','1',$emp) ?>>Linux<br> 
-        <input type="checkbox" name="cert3" <?php echo $qo->checkValues('cert3','1',$emp) ?>>Java<br>
-        <input type="checkbox" name="cert4" <?php echo $qo->checkValues('cert4','1',$emp) ?>>PL/SQL<br> 
-        <input type="checkbox" name="cert5" <?php echo $qo->checkValues('cert5','1',$emp) ?>>La otra<br>
-        <input type="checkbox" name="cert6" <?php echo $qo->checkValues('cert6','1',$emp) ?>>..Y la que queda<br> 
+     <tr> 
+        <td> Certificaciones </td>
+        <td>   
+            <table align=center cellpadding="8" cellspacing="2" bgcolor="#BBD4C4">
+                <tr>
+                <td bgcolor="#F2F3F4"><input type="checkbox" name="cert0" <?php echo $qo->checkValues('cert0','1',$emp) ?> >Amazon </td>
+                <td bgcolor="#F2F3F4"> <input type="checkbox" name="cert1" <?php echo $qo->checkValues('cert1','1',$emp) ?>>Cisco </td>
+                <td bgcolor="#F2F3F4"> <input type="checkbox" name="cert2" <?php echo $qo->checkValues('cert2','1',$emp) ?>>Linux </td>
+                <td bgcolor="#F2F3F4"> <input type="checkbox" name="cert3" <?php echo $qo->checkValues('cert3','1',$emp) ?>>Java </td>
+                <td bgcolor="#F2F3F4"><input type="checkbox" name="cert4" <?php echo $qo->checkValues('cert4','1',$emp) ?>>PL/SQL </td>
+                <td bgcolor="#F2F3F4"><input type="checkbox" name="cert5" <?php echo $qo->checkValues('cert5','1',$emp) ?>>La otra </td>
+                <td bgcolor="#F2F3F4"><input type="checkbox" name="cert6" <?php echo $qo->checkValues('cert6','1',$emp) ?>>..Y la que queda </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+
     
-    <br>Situación laboral<br>
-    <select name="sitLab">
-            <option value="Estudiante" <?php echo $qo->checkValues('sitLab','Estudiante',$emp) ?>> Estudiante </option>
-            <option value="Activo" <?php echo $qo->checkValues('sitLab','Activo',$emp) ?>> Activo </option>
-            <option value="Parado" <?php echo $qo->checkValues('sitLab','Parado',$emp) ?>> Parado </option>
-            <option value="Jubilado" <?php echo $qo->checkValues('sitLab','Jubilado',$emp) ?>> Jubilado </option>
-    </select><br><br>
+    <tr> 
+        <td> Situación laboral </td>
+        <td>
+        <select name="sitLab">
+                <option value="Estudiante" <?php echo $qo->checkValues('sitLab','Estudiante',$emp) ?>> Estudiante </option>
+                <option value="Activo" <?php echo $qo->checkValues('sitLab','Activo',$emp) ?>> Activo </option>
+                <option value="Parado" <?php echo $qo->checkValues('sitLab','Parado',$emp) ?>> Parado </option>
+                <option value="Jubilado" <?php echo $qo->checkValues('sitLab','Jubilado',$emp) ?>> Jubilado </option>
+        </select>
+        </td>
+    </tr>
     
-    <br>Email <br>
-    <input type="email" name="correo" value=<?php echo $emp['email']?>><br>
+    <tr>
+        <td> Email </td>
+        <td>
+        <input type="email" name="correo" value=<?php echo $emp['email']?>>
+        </td>
+    </tr>
+
+    <tr>
+        <td> Localidad </td>
+        <td>
+        <select name="localidad">
+                <option value="1" <?php echo $qo->checkValues('localidad',1,$emp) ?>> Almeria </option>
+                <option value="2" <?php echo $qo->checkValues('localidad',2,$emp) ?>> Cadiz </option>
+                <option value="3" <?php echo $qo->checkValues('localidad',3,$emp) ?>> Cordoba </option>
+                <option value="4" <?php echo $qo->checkValues('localidad',4,$emp) ?>> Granada </option>
+                <option value="5" <?php echo $qo->checkValues('localidad',5,$emp) ?>> Sevilla </option>
+        </select>
+        </td>
+    </tr>
     
-    <br>Localidad<br>
-    <select name="localidad">
-            <option value="1" <?php echo $qo->checkValues('localidad',1,$emp) ?>> Almeria </option>
-            <option value="2" <?php echo $qo->checkValues('localidad',2,$emp) ?>> Cadiz </option>
-            <option value="3" <?php echo $qo->checkValues('localidad',3,$emp) ?>> Cordoba </option>
-            <option value="4" <?php echo $qo->checkValues('localidad',4,$emp) ?>> Granada </option>
-            <option value="5" <?php echo $qo->checkValues('localidad',5,$emp) ?>> Sevilla </option>
-    </select><br><br>
+    <tr>
+        <td> Fecha de nacimiento </td>
+        <td> <input type="date" name="fechaNacimiento" value=<?php echo $emp['fechaNacimiento']?> readonly> </td>
+    </tr>
     
-    <br>Fecha de nacimiento<br>
-    <input type="date" name="fechaNacimiento" value=<?php echo $emp['fechaNacimiento']?> readonly><br>
-    
-    <br>Telefono<br>
-    <input type="text" name="telefono" value = <?php echo $emp['telefono']?>><br>
-    
+    <tr>
+        <td> Telefono </td>
+        <td> <input type="text" name="telefono" value = <?php echo $emp['telefono']?>> </td>
+    </tr>
+
+</table>
+    <br>
     <input type="submit" name="edicion" value="Guardar"> 
-    <input type="reset" value="Restablecer">
+    <input type="reset" name="edicion" value="Restablecer">
+
 
 </form>

@@ -1,6 +1,6 @@
 <?php
 
-	$opcion = "$_POST[edicion]";
+	$opcion = "$_POST[insertar]";
 	echo "$opcion";
 
 
@@ -103,7 +103,7 @@
 	
 	// Consulta SQL 
 
-	if(strcmp($opcion,'Registar')==0){
+	if(strcmp($opcion,'Registrar')==0){
 
 		if($qo->guardarInfo($dni, $imagen, $nombreCompleto, $sexo, $estudiosSuperiores,
 		$certificaciones, $situacionLaboral, $email, $localidad, $fechaNacimiento, $telefono) == true){

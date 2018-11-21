@@ -286,25 +286,25 @@ class empQueries{
       }else{
 
         if(strcmp($certs[0],'1')==0){
-          $cadenaCerts = $cadenaCerts . 'Amazon<br>';
+          $cadenaCerts = $cadenaCerts . 'Amazon, ';
         } 
         if(strcmp($certs[1],'1')==0){
-          $cadenaCerts = $cadenaCerts . 'Cisco<br>';
+          $cadenaCerts = $cadenaCerts . 'Cisco, ';
         } 
         if(strcmp($certs[2],'1')==0){
-          $cadenaCerts = $cadenaCerts . 'Linux<br>';
+          $cadenaCerts = $cadenaCerts . 'Linux, ';
         } 
         if(strcmp($certs[3],'1')==0){
-          $cadenaCerts = $cadenaCerts . 'Java<br>';
+          $cadenaCerts = $cadenaCerts . 'Java, ';
         }
         if(strcmp($certs[4],'1')==0){
-          $cadenaCerts = $cadenaCerts . 'PL/SQL<br>';
+          $cadenaCerts = $cadenaCerts . 'PL/SQL, ';
         }
         if(strcmp($certs[5],'1')==0){
-          $cadenaCerts = $cadenaCerts . 'La Otra<br>';
+          $cadenaCerts = $cadenaCerts . 'La Otra, ';
         }
         if(strcmp($certs[6],'1')==0){
-          $cadenaCerts = $cadenaCerts . '..Y la que queda';
+          $cadenaCerts = $cadenaCerts . '..Y la que queda <br>';
         }
          return $cadenaCerts;
       }    

@@ -37,7 +37,7 @@ sistemas, permitiendo que un visitante cree una cuenta de usuario yque los usuar
 contraseña) deberá almacenarse en la base de datos MySQL, usando algún tipo de encriptación que evite que las contraseñas
 sean directamente visibles en dicha base de datos.
 
-|Requisito | Cumplido |
+|Requisito | Estado |
 | --- | --- |
 | CSS está fuera del código php/html| ![](https://img.shields.io/badge/Estado-done-green.svg) |
 | Librería con código de acceso a la base de datos | ![](https://img.shields.io/badge/Estado-done-green.svg) |

@@ -5,7 +5,7 @@
     <!-- Para tildes y acentos -->
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
   </head>
-  <body>
+  <body bgcolor="#CFE1D6">
 
   <!--Se centra el titulo y se concatena con la imagen de la casa,(permite
   volver al menu de inicio) posicionandola al lado derecho-->
@@ -17,6 +17,7 @@
         </a>
       </right>
     </h1>
+
 
 <?php
 
@@ -33,11 +34,14 @@
     die();
   }
 
+  $caca="&#xf019";
   // Muestra de datos ----------------------------------------------------------
 
   // Creamos la estructura que debe de tener la tabla
-echo "<h3 align=center> Listado completo de empleados </h3>
-    <table align=center cellpadding=5 class=list style=margin: 0 auto;>
+echo "<h3 align=center > Listado completo de empleados </h3>
+    <p align=center> Insertar usuario <a href='insertar.php'> <img src=./pics/insertar.png width=15 height=15></img></a> </p> <br> 
+    </br>
+    <table align=center cellpadding=8 cellspacing=2 bgcolor=#BBD4C4 class=list style=margin: 0 auto;>
       <tr align=left class=list>
         <th class=list>Nombre </th>
         <th class=list>DNI </th>
@@ -60,16 +64,18 @@ echo "<h3 align=center> Listado completo de empleados </h3>
       <td class=list>$emp[dni]</td>
       <td class=list>$emp[email]</td>
       <td class=list align=center>
-          <a href=$urlEmp>+ info</a>
-          <a href=$urlEmpDel>Eliminar</a>
-          <a href=$urlEmpEd>Editar</a>
+          <a href=$urlEmp><img src=./pics/+info.png width=15 height=15></img></a>
+          <a href=$urlEmpDel><img src=./pics/eliminar.png width=15 height=15></img></a>
+          <a href=$urlEmpEd><img src=./pics/editar.png width=15 height=15></img></a>
       </td>
     </tr>";
   }
 
   echo "</table>"; // Cerramos la tabla (linea 33 - <table align="center"  ... )
 
-  echo "Intsertar usuario <a href='insertar.php'>aqui</a>" 
+ echo " <br>
+  </br>";
+
 
 
 ?>
