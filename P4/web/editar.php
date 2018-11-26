@@ -10,8 +10,8 @@
 <h1 align="center" style="background-color:#263238 ; color:#C2C2C2">
         Datos del empleado
         <right>
-            <a href="/web/empleados.php">
-            <img src="/web/pics/home.ico"></img>
+            <a href="/practicapw/empleados.php">
+            <img src="/practicapw/pics/home.ico"></img>
             </a>
         </right>
         </h1>
