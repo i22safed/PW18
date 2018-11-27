@@ -40,6 +40,11 @@
   // Creamos la estructura que debe de tener la tabla
 echo "<h3 align=center > Listado completo de empleados </h3>
     <p align=center> Insertar usuario <a href='insertar.php'> <img src=./pics/insertar.png width=15 height=15></img></a> </p> <br> 
+    
+    <p align=center>
+      <a href='log.php'> Login </a>
+      <a href='reg.php'> Registro </a>
+    </p>
     </br>
     <table align=center cellpadding=8 cellspacing=2 bgcolor=#BBD4C4 class=list style=margin: 0 auto;>
       <tr align=left class=list>
@@ -74,6 +79,9 @@ echo "<h3 align=center > Listado completo de empleados </h3>
   echo "</table>"; // Cerramos la tabla (linea 33 - <table align="center"  ... )
 
  echo " <br>
+    <p align=center>
+      
+    </p>
   </br>";
 
 

@@ -7,7 +7,7 @@
 
 class empQueries{
 
-  public $user = "alberto";
+  public $user = "davidpw";
   public $pass = "";
   public $dbc;
 
