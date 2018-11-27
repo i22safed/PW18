@@ -6,6 +6,7 @@
         $username = $_SESSION['usuario'];
         $name = $_SESSION['dni'];
         $admin = $_SESSION['rol'];
+        $texp = $_SESSION['expire'];
     }
 	else{
 		$logged = false;

@@ -1,11 +1,4 @@
 
-
-
-
-
-
-    
-    
 <?php 
 
 $usuario = $_POST['user'];
