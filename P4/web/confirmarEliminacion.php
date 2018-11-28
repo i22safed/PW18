@@ -1,3 +1,33 @@
+<?php 
+  
+  include('session.php');
+  
+  if(isset($_SESSION['usuario'])){
+    echo "Sesión inciada como ".$_SESSION['usuario'];
+    $sesion = 1;
+  }else{
+    $sesion = 0;
+  }
+
+  if(isset($_SESSION['usuario'])){
+    $now = time();
+    if($now > $_SESSION['expire']){
+      session_destroy();
+    }
+  }
+
+  if(!isset($_SESSION['usuario'])){
+    header('Location: error.php?error=1');
+  }else{
+
+    if(strcmp($_SESSION['rol'],'Admin')!=0){
+        header('Location: error.php?error=2');
+    }
+  }
+?>
+
+
+
 
 <!DOCTYPE html>
 <html lang="es">

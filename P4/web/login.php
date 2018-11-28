@@ -32,9 +32,10 @@ if(strcmp($opcion,'Login')==0){
             $_SESSION['dni'] = $userInfo['dni'];
             $_SESSION['rol'] = $userInfo['rol'];
             $_SESSION['check'] = hash('ripemd128', $_SERVER['REMOTE_ADDR'] . $_SERVER['HTTP_USER_AGENT']);
+            $_SESSION['start'] = time();
+            $_SESSION['expire'] = $_SESSION['start'] + (1*60);
 
             header('Location: index.php');
-            return true;
 
         }else{
             echo "La contraseña no coincide con la de la bd";

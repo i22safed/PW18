@@ -1,3 +1,24 @@
+<?php 
+  
+  include('session.php');
+  
+  if(isset($_SESSION['usuario'])){
+    echo "Sesión inciada como ".$_SESSION['usuario'];
+    $sesion = 1;
+  }else{
+    $sesion = 0;
+  }
+
+  if(isset($_SESSION['usuario'])){
+    $now = time();
+    if($now > $_SESSION['expire']){
+      session_destroy();
+    }
+  }
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="es">
   <head>
@@ -37,14 +58,20 @@
   $caca="&#xf019";
   // Muestra de datos ----------------------------------------------------------
 
+  
+
+
   // Creamos la estructura que debe de tener la tabla
 echo "<h3 align=center > Listado completo de empleados </h3>
-    <p align=center> Insertar usuario <a href='insertar.php'> <img src=./pics/insertar.png width=15 height=15></img></a> </p> <br> 
+    <p align=center> Insertar usuario <a href='insertar.php'> <img src=./pics/insertar.png width=15 height=15></img></a> </p> <br>";
     
-    <p align=center>
-      <a href='log.php'> Login </a>
-      <a href='reg.php'> Registro </a>
-    </p>
+    if ($sesion == 0){
+      echo '<p align="center"><a href="log.php">Login </a><a href="reg.php">  Registrarse</a></p>';
+    }else{
+      echo '<p align="right"><a href="logout.php">Logout</a></p>';
+    }
+  
+    echo "
     </br>
     <table align=center cellpadding=8 cellspacing=2 bgcolor=#BBD4C4 class=list style=margin: 0 auto;>
       <tr align=left class=list>
@@ -69,9 +96,9 @@ echo "<h3 align=center > Listado completo de empleados </h3>
       <td class=list>$emp[dni]</td>
       <td class=list>$emp[email]</td>
       <td class=list align=center>
-          <a href=$urlEmp><img src=./pics/+info.png width=15 height=15></img></a>
-          <a href=$urlEmpDel><img src=./pics/eliminar.png width=15 height=15></img></a>
-          <a href=$urlEmpEd><img src=./pics/editar.png width=15 height=15></img></a>
+          <a href=$urlEmp title='Detalles del empleado'><img src=./pics/+info.png width=15 height=15></img></a>
+          <a href=$urlEmpDel title='Borrar empleado'><img src=./pics/eliminar.png width=15 height=15></img></a>
+          <a href=$urlEmpEd title='Editar empleado'><img src=./pics/editar.png width=15 height=15></img></a>
       </td>
     </tr>";
   }

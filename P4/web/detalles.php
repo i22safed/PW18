@@ -1,3 +1,27 @@
+<?php 
+  
+  include('session.php');
+  
+  if(isset($_SESSION['usuario'])){
+    echo "Sesión inciada como ".$_SESSION['usuario'];
+    $sesion = 1;
+  }else{
+    $sesion = 0;
+  }
+
+  if(isset($_SESSION['usuario'])){
+    $now = time();
+    if($now > $_SESSION['expire']){
+      session_destroy();
+    }
+  }
+
+  if(!isset($_SESSION['usuario'])){
+    header('Location: error.php?error=1');
+  }
+  
+?>
+
 <!DOCTYPE html>
 <html lang="es">
   <head>
@@ -12,7 +36,7 @@
     <h1 align="center" style="background-color:#263238 ; color:#C2C2C2">
       Empleado
       <right>
-        <a href="/practica/empleados.php">
+        <a href="/practicapw/empleados.php">
           <img src="/practicapw/pics/home.ico"></img>
         </a>
       </right>
