@@ -4,7 +4,7 @@
 
     class userQueries{
 
-        public $user = "davidpw";
+        public $user = "alberto";
         public $pass = "";
         public $dbc;
       

@@ -63,15 +63,19 @@
 
   // Creamos la estructura que debe de tener la tabla
 echo "<h3 align=center > Listado completo de empleados </h3>
-    <p align=center> Insertar usuario <a href='insertar.php'> <img src=./pics/insertar.png width=15 height=15></img></a> </p> <br>";
-    
+    <p align=center> Insertar usuario <a href='insertar.php'> <img src=./pics/insertar.png width=15 height=15></img></a> </p>";
+  
+  echo '<table align="center"> <tr>';
     if ($sesion == 0){
-      echo '<p align="center"><a href="log.php">Login </a><a href="reg.php">  Registrarse</a></p>';
+      echo '
+      <td> <p align="center"> <a href="log.php"><img src="pics\login.png" width=150 height=30 > </img> </a></p> </td>
+      <td> <p align="center"> <a href="reg.php">  <img src="pics\boton-registrar.png" width=150 height=50 > </img></a></p> </td>';
     }else{
-      echo '<p align="right"><a href="logout.php">Logout</a></p>';
+      echo '<td> <p align="right"><a href="logout.php">Logout</a></p> </td>';
     }
   
     echo "
+    </tr> </table>
     </br>
     <table align=center cellpadding=8 cellspacing=2 bgcolor=#BBD4C4 class=list style=margin: 0 auto;>
       <tr align=left class=list>
