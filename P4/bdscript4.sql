@@ -10,6 +10,7 @@ create table empleados
 	estudiosSuperiores VARCHAR(16) not null,
 	certificaciones VARCHAR(7),
 	situacionLaboral VARCHAR(16) not null,
+	sueldo INT(8)
 	email VARCHAR(32) not null,
 	localidad INT(3) not null,
 	fechaNacimiento date not null,

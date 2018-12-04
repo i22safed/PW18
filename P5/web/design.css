@@ -1,0 +1,452 @@
+
+/* Global */
+
+* {
+    top: 0%;
+    margin: 0%;
+}
+
+input.input {
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+footer{
+    background-image: url('fheader.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-left: auto; 
+    margin-right: auto; 
+    
+    -webkit-box-shadow: 8px 133px 224px 116px rgba(0,0,0,0.75);
+    -moz-box-shadow: 8px 133px 224px 116px rgba(0,0,0,0.75);
+    box-shadow: 8px 133px 224px 116px rgba(0,0,0,0.75);
+
+}
+
+img.foot{
+    
+    margin: 5px 25px 0px 95%;
+    width: 40px;
+    height: 40px;
+}
+
+/* Para el fichero index.php ------------------------------------------------------ */
+
+h1.index{
+    text-align: center;
+    font-family: 'Michroma','sans-serif';
+    font-size: 36px;
+    color: #B0BEC5;
+}
+
+body.index{
+    background-image: url('header.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-left: auto; 
+    margin-right: auto; 
+    vertical-align: auto;
+}
+
+p.index{
+    font-family: 'Roboto','sans-serif';
+    color: #B0BEC5;
+    size: 14px;
+    text-align: center;
+}
+img.index{
+   width: 400px;
+   height: 400px; 
+}
+
+/* Para el fichero empleados.php -------------------------------------------------- */
+
+body.emp{
+
+    background-color: #B0BEC5;
+    font-family: 'Roboto', sans-serif;
+
+}
+h1.emp{
+
+    width: 100%;
+    height: 200px;
+    text-align: center;
+    background-image: url('fheader.jpg');
+    font-family: 'Michroma','sans-serif';
+    font-size: 48px;
+    -webkit-box-shadow: -11px -58px 134px 55px rgba(0,0,0,0.75);
+    -moz-box-shadow: -11px -58px 134px 55px rgba(0,0,0,0.75);
+    box-shadow: -11px -58px 134px 55px rgba(0,0,0,0.75);
+
+}
+
+h3.emp{
+    text-align: center;
+}
+
+table.emp{ 
+    margin: auto;
+    width: 60%;
+    border: 0px solid black;
+    border-collapse: collapse;
+
+    /* Sombreado en la tabla  PERO SALEN LAS ESQUINAS DE DIFERENTE COLOR
+    -webkit-box-shadow: 18px 22px 79px -14px rgba(0,0,0,0.75);
+    -moz-box-shadow: 18px 22px 79px -14px rgba(0,0,0,0.75);
+    box-shadow: 18px 22px 79px -14px rgba(0,0,0,0.75);
+    */
+}
+th.emp{
+    background-color:#455a64;
+    color: white;
+    text-align: left;
+    padding: 8px;
+}
+
+/* Redondeado en las esquinas de la tabla */
+
+th.emp:first-child { 
+    border-top-left-radius: 15px; 
+}
+th.emp:last-child {   
+    border-top-right-radius: 15px; 
+}
+tr.emp:last-child td:first-child { 
+    border-bottom-left-radius: 15px;
+}
+tr.emp:last-child td:last-child { 
+    border-bottom-right-radius: 15px;
+     
+}
+
+#th.emp{
+    text-indent: 2%;
+}
+
+tr.emp:nth-child(even){
+    background-color: #ECEFF1;
+}
+tr.emp{
+    text-align: center;
+    background-color: #cfd8dc;
+}
+td.emp{
+    text-align: left;
+    padding: 8px;
+}
+p.emp{
+    text-align: center;
+}
+a.emp{
+    text-align: center;
+}
+
+/* Para el fichero detalles.php --------------------------------------------------- */
+
+body.detalles{
+
+    background-color: #B0BEC5;
+    font-family: 'Roboto', sans-serif;
+
+}
+h1.detalles{
+
+    width: 100%;
+    height: 200px;
+    text-align: center;
+    background-image: url('fheader.jpg');
+    font-family: 'Michroma','sans-serif';
+    font-size: 48px;
+    -webkit-box-shadow: -11px -58px 134px 55px rgba(0,0,0,0.75);
+    -moz-box-shadow: -11px -58px 134px 55px rgba(0,0,0,0.75);
+    box-shadow: -11px -58px 134px 55px rgba(0,0,0,0.75);
+
+}
+
+h3.detalles{
+    text-align: center;
+}
+
+table.detalles{ 
+    margin: auto;
+    width: 35%;
+    border: 0px solid black;
+    border-collapse: collapse;
+
+}
+
+th.detalles{
+    background-color:#455a64;
+    color: white;
+    text-align: left;
+    padding: 8px;
+}
+
+th.detalles:first-child { 
+    border-top-left-radius: 15px; 
+    text-align: center;
+}
+th.detalles:last-child {   
+    border-top-right-radius: 15px; 
+}
+
+tr.detalles:last-child td:last-child { 
+    border-bottom-right-radius: 15px;    
+}
+
+
+
+tr.detalles{
+    text-align: left;
+    background-color: #cfd8dc;
+}
+td.detalles{
+    text-align: left;
+    padding: 7px;
+}
+
+#imagen{
+    border-bottom-left-radius: 15px;
+    text-align: center;
+}
+
+p.detalles{
+    text-align: center;
+}
+
+img.icons{
+    width: 19px;
+    height: 19px;
+}
+
+/* Para el fichero insertar.php ------------------------------------------------- */
+
+body.insertar{
+
+    background-color: #B0BEC5;
+    font-family: 'Roboto', sans-serif;
+
+}
+h1.insertar{
+
+    width: 100%;
+    height: 200px;
+    text-align: center;
+    background-image: url('fheader.jpg');
+    font-family: 'Michroma','sans-serif';
+    font-size: 48px;
+    -webkit-box-shadow: -11px -58px 134px 55px rgba(0,0,0,0.75);
+    -moz-box-shadow: -11px -58px 134px 55px rgba(0,0,0,0.75);
+    box-shadow: -11px -58px 134px 55px rgba(0,0,0,0.75);
+
+}
+
+h3.insertar{
+    text-align: center;
+}
+
+table.insertar{ 
+    margin: auto;
+    width: 60%;
+    border: 0px solid black;
+    border-collapse: collapse;
+
+    /* Sombreado en la tabla  PERO SALEN LAS ESQUINAS DE DIFERENTE COLOR
+    -webkit-box-shadow: 18px 22px 79px -14px rgba(0,0,0,0.75);
+    -moz-box-shadow: 18px 22px 79px -14px rgba(0,0,0,0.75);
+    box-shadow: 18px 22px 79px -14px rgba(0,0,0,0.75);
+    */
+}
+
+td.insertar{
+    background-color:#455a64;
+    color: white;
+    text-align: left;
+    padding: 8px;
+    text-indent: 5%;
+}
+
+/* Redondeado en las esquinas de la tabla */
+
+tr.insertar:first-child td:first-child { 
+    border-top-left-radius: 15px; 
+}
+tr.insertar:first-child td:last-child {   
+    border-top-right-radius: 15px; 
+}
+tr.insertar:last-child td:first-child { 
+    border-bottom-left-radius: 15px;
+}
+tr.insertar:last-child td:last-child { 
+    border-bottom-right-radius: 15px;
+}
+
+p.insertar{
+    text-align: center;
+}
+
+table.certificaciones{ 
+    margin: 5%;
+    width: 48%;
+    border: 0px solid black;
+    border-collapse: collapse;
+    
+    /* Sombreado en la tabla  PERO SALEN LAS ESQUINAS DE DIFERENTE COLOR
+    -webkit-box-shadow: 18px 22px 79px -14px rgba(0,0,0,0.75);
+    -moz-box-shadow: 18px 22px 79px -14px rgba(0,0,0,0.75);
+    box-shadow: 18px 22px 79px -14px rgba(0,0,0,0.75);
+    */
+}
+
+td.certificaciones{
+    padding: 3px;
+    color: white;
+}
+
+/* Para el fichero confirmarEliminacion.php ------------------------------------- */
+
+
+body.eliminar{
+
+    background-color: #B0BEC5;
+    font-family: 'Roboto', sans-serif;
+
+}
+h1.eliminar{
+
+    width: 100%;
+    height: 200px;
+    text-align: center;
+    background-image: url('fheader.jpg');
+    font-family: 'Michroma','sans-serif';
+    font-size: 48px;
+    -webkit-box-shadow: -11px -58px 134px 55px rgba(0,0,0,0.75);
+    -moz-box-shadow: -11px -58px 134px 55px rgba(0,0,0,0.75);
+    box-shadow: -11px -58px 134px 55px rgba(0,0,0,0.75);
+
+}
+
+h3.eliminar{
+    text-align: center;
+}
+
+table.eliminar{ 
+    margin: auto;
+    width: 20%;
+    border: 0px solid black;
+    border-collapse: collapse;
+
+    /* Sombreado en la tabla  PERO SALEN LAS ESQUINAS DE DIFERENTE COLOR
+    -webkit-box-shadow: 18px 22px 79px -14px rgba(0,0,0,0.75);
+    -moz-box-shadow: 18px 22px 79px -14px rgba(0,0,0,0.75);
+    box-shadow: 18px 22px 79px -14px rgba(0,0,0,0.75);
+    */
+}
+
+th.eliminar{
+    background-color:#455a64;
+    color: white;
+    text-align: left;
+    padding: 8px;
+}
+
+tr.eliminar{
+    
+    background-color: #cfd8dc;
+}
+
+p.eliminar{
+    text-align: center;
+}
+tr.eliminar{
+  text-align: center;  
+}
+
+#eli.eliminar{
+    text-align: right;
+    padding: 7px;
+}
+#can.eliminar{
+    text-align: left;
+    padding: 7px;
+}
+
+th.eliminar:first-child { 
+    border-top-left-radius: 15px; 
+    border-top-right-radius: 15px; 
+}
+
+tr.eliminar:last-child td:first-child { 
+    border-bottom-left-radius: 15px;
+}
+tr.eliminar:last-child td:last-child { 
+    border-bottom-right-radius: 15px;
+}
+
+/* Para el fichero reg.php */
+
+body.reg{
+    background-color: #B0BEC5;
+    font-family: 'Roboto', sans-serif;
+}
+
+table.reg{ 
+    margin: auto;
+    width: 30%;
+    border: 0px solid black;
+    border-collapse: collapse;
+
+    /* Sombreado en la tabla  PERO SALEN LAS ESQUINAS DE DIFERENTE COLOR
+    -webkit-box-shadow: 18px 22px 79px -14px rgba(0,0,0,0.75);
+    -moz-box-shadow: 18px 22px 79px -14px rgba(0,0,0,0.75);
+    box-shadow: 18px 22px 79px -14px rgba(0,0,0,0.75);
+    */
+}
+
+td.reg{
+    background-color:#455a64;
+    color: white;
+    text-align: left;
+    padding: 8px;
+    text-indent: 5%;
+}
+
+/* Redondeado en las esquinas de la tabla */
+
+tr.reg:first-child td:first-child { 
+    border-top-left-radius: 15px; 
+}
+tr.reg:first-child td:last-child {   
+    border-top-right-radius: 15px; 
+}
+tr.reg:last-child td:first-child { 
+    border-bottom-left-radius: 15px;
+}
+tr.reg:last-child td:last-child { 
+    border-bottom-right-radius: 15px;
+}
+
+p.reg{
+    text-align: center;
+}
+
+/* Para el fichero log.php */
+
+p.log{
+    text-align: right;
+    margin-right: 2%;
+}
+
+/* Para el fichero error.php */
+
+h2.error, h1.error{
+    text-align: center;
+}
+
+img.error{
+    display: block;
+    margin: auto;
+}
