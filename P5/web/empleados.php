@@ -26,6 +26,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     
     <link rel="stylesheet" href="design.css" type="text/css">
+    <link rel="icon" href="src/favicon.ico" type="image/ico">
     <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Michroma" rel="stylesheet">
@@ -46,11 +47,11 @@
           if (strcmp($rol,'Admin')==0){
             // Futuramente incluir en nombre de sesión un enlace al panel de control
             echo"<p class='log'> 
-              <br>Has iniciado sesión como <b>$nombreSesion</b> ($rol)
+              <br>Has iniciado sesión como <a href='control.php'><b>$nombreSesion</b></a> ($rol)
             <p>";
           }else{
             echo"<p class='log'> 
-              <br>Has iniciado sesión como <b>$nombreSesion</b>
+              <br>Has iniciado sesión como <a href='control.php'><b>$nombreSesion</b></a>
             <p>";
           }
           
@@ -158,10 +159,6 @@ echo"
 </body>
 
   <footer>
-    <!--<p>
-      <img class='foot' src="pics/fb.png">
-      <img class='foot' src="pics/twitter.png">
-      <img class='foot' src="pics/instagram.png">
-    </p>-->
+  
   </footer>
 </html>

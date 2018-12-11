@@ -84,10 +84,8 @@
             usuario,pass,rol)VALUES ('$dni', '$user', '$token', 'User');");
 
             if($sentence->execute()){
-              echo "<br>Registro completado: $user";
               return true;
             }else{
-              echo "<br>Error en el registro: $user";
               return false;
             }
 
@@ -126,7 +124,66 @@
             }
         }
 
+        public function checkDNIDBU($dni){
+               
+            // Chequea si el DNI está en el sistema
 
+            $sentence = $this->dbc->prepare("SELECT dni FROM usuarios WHERE dni = '$dni';");
+            
+            if($sentence->execute()){
+                $userDNI = $sentence->fetch();
+                if(empty($userDNI)){
+                return true;
+                }else{
+                return false;
+                }
+            }else{
+                echo "Error al obtener el DNI";
+                return false;
+            }
+        
+        }
+
+        public function checkDNIDBE($dni){
+               
+            // Chequea si el DNI está en el sistema
+
+            $sentence = $this->dbc->prepare("SELECT dni FROM empleados WHERE dni = '$dni';");
+            
+            if($sentence->execute()){
+                $userDNI = $sentence->fetch();
+                if(empty($userDNI)){
+                return true;
+                }else{
+                return false;
+                }
+            }else{
+                echo "Error al obtener el DNI";
+                return false;
+            }
+        
+        }
+
+        public function checkUserName($usuario){
+
+            $sentence = $this->dbc->prepare("SELECT usuario FROM usuarios WHERE usuario = '$usuario';");
+
+            if($sentence->execute()){
+                $username = $sentence->fetch();
+                if(empty($username)){
+                    return true;
+                }else{
+                    return false;
+                }
+            }else{
+                echo "Error al obtener el DNI";
+                return false;
+            }
+            
+
+
+
+        }
 
         
     }

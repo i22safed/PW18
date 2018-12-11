@@ -13,7 +13,7 @@ input.input {
 }
 
 footer{
-    background-image: url('fheader.jpg');
+    background-image: url('src/fheader.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     margin-left: auto; 
@@ -26,7 +26,6 @@ footer{
 }
 
 img.foot{
-    
     margin: 5px 25px 0px 95%;
     width: 40px;
     height: 40px;
@@ -42,7 +41,7 @@ h1.index{
 }
 
 body.index{
-    background-image: url('header.jpg');
+    background-image: url('src/header.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     margin-left: auto; 
@@ -74,7 +73,7 @@ h1.emp{
     width: 100%;
     height: 200px;
     text-align: center;
-    background-image: url('fheader.jpg');
+    background-image: url('src/fheader.jpg');
     font-family: 'Michroma','sans-serif';
     font-size: 48px;
     -webkit-box-shadow: -11px -58px 134px 55px rgba(0,0,0,0.75);
@@ -157,7 +156,7 @@ h1.detalles{
     width: 100%;
     height: 200px;
     text-align: center;
-    background-image: url('fheader.jpg');
+    background-image: url('src/fheader.jpg');
     font-family: 'Michroma','sans-serif';
     font-size: 48px;
     -webkit-box-shadow: -11px -58px 134px 55px rgba(0,0,0,0.75);
@@ -235,7 +234,7 @@ h1.insertar{
     width: 100%;
     height: 200px;
     text-align: center;
-    background-image: url('fheader.jpg');
+    background-image: url('src/fheader.jpg');
     font-family: 'Michroma','sans-serif';
     font-size: 48px;
     -webkit-box-shadow: -11px -58px 134px 55px rgba(0,0,0,0.75);
@@ -320,7 +319,7 @@ h1.eliminar{
     width: 100%;
     height: 200px;
     text-align: center;
-    background-image: url('fheader.jpg');
+    background-image: url('src/fheader.jpg');
     font-family: 'Michroma','sans-serif';
     font-size: 48px;
     -webkit-box-shadow: -11px -58px 134px 55px rgba(0,0,0,0.75);
@@ -329,7 +328,7 @@ h1.eliminar{
 
 }
 
-h3.eliminar{
+h4.eliminar, h3.eliminar{
     text-align: center;
 }
 
@@ -442,7 +441,7 @@ p.log{
 
 /* Para el fichero error.php */
 
-h2.error, h1.error{
+h3.error, h2.error, h1.error{
     text-align: center;
 }
 

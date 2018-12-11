@@ -3,7 +3,8 @@
   include('session.php');
   
   if(isset($_SESSION['usuario'])){
-    echo "Sesión inciada como ".$_SESSION['usuario'];
+    $nombreSesion = $_SESSION['usuario'];
+    $rol = $_SESSION['rol'];
     $sesion = 1;
   }else{
     $sesion = 0;
@@ -35,7 +36,7 @@
         <!-- Para tildes y acentos -->
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
         <link rel="stylesheet" href="design.css" type="text/css">
-
+        <link rel="icon" href="src/favicon.ico" type="image/ico">
         <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Michroma" rel="stylesheet">
@@ -49,6 +50,21 @@
         </h1>
 
     <?php
+
+        if($sesion==1){
+
+            if (strcmp($rol,'Admin')==0){
+            // Futuramente incluir en nombre de sesión un enlace al panel de control
+            echo"<p class='log'> 
+                <br>Has iniciado sesión como <b>$nombreSesion</b> ($rol)
+            <p>";
+            }else{
+            echo"<p class='log'> 
+                <br>Has iniciado sesión como <b>$nombreSesion</b>
+            <p>";
+            }
+        }
+
 
         $dni = $_GET['dni'];
         require_once('functions.php');
@@ -140,17 +156,17 @@
                     <td class='insertar'> 
                         <table class='certificaciones'>
                             <tr class='certificaciones'>
-                                <th class='certificaciones'><input type="checkbox" name="cert0" <?php echo $qo->checkValues('cert2','1',$emp) ?>>  Amazon</th>
-                                <th class='certificaciones'><input type="checkbox" name="cert1" <?php echo $qo->checkValues('cert2','1',$emp) ?>>  Cisco</th>
-                                <th class='certificaciones'><input type="checkbox" name="cert2" <?php echo $qo->checkValues('cert2','1',$emp) ?>>  Linux </th>
+                                <td class='certificaciones'><input type="checkbox" name="cert0" <?php echo $qo->checkValues('cert0','1',$emp) ?>>  Amazon</td>
+                                <td class='certificaciones'><input type="checkbox" name="cert1" <?php echo $qo->checkValues('cert1','1',$emp) ?>>  Cisco</td>
+                                <td class='certificaciones'><input type="checkbox" name="cert2" <?php echo $qo->checkValues('cert2','1',$emp) ?>>  Linux </td>
                             </tr>
                             <tr class='certificaciones'>
-                                <td class='certificaciones'><input type="checkbox" name="cert3" <?php echo $qo->checkValues('cert2','1',$emp) ?>>  Java</td>
-                                <td class='certificaciones'><input type="checkbox" name="cert4" <?php echo $qo->checkValues('cert2','1',$emp) ?>>  PL/SQL</td>
-                                <td class='certificaciones'><input type="checkbox" name="cert5" <?php echo $qo->checkValues('cert2','1',$emp) ?>>  Qt </td>
+                                <td class='certificaciones'><input type="checkbox" name="cert3" <?php echo $qo->checkValues('cert3','1',$emp) ?>>  Java</td>
+                                <td class='certificaciones'><input type="checkbox" name="cert4" <?php echo $qo->checkValues('cert4','1',$emp) ?>>  PL/SQL</td>
+                                <td class='certificaciones'><input type="checkbox" name="cert5" <?php echo $qo->checkValues('cert5','1',$emp) ?>>  Qt </td>
                             </tr>
                             <tr>
-                                <td class='certificaciones'><input type="checkbox" name="cert6" <?php echo $qo->checkValues('cert2','1',$emp) ?>>  Ruby</td>
+                                <td class='certificaciones'><input type="checkbox" name="cert6" <?php echo $qo->checkValues('cert6','1',$emp) ?>>  Ruby</td>
                                 <td class='certificaciones'></td>
                                 <td class='certificaciones'></td>
                             </tr>
@@ -216,4 +232,5 @@
             </p>
         </form>
     </body>
+
 </html>

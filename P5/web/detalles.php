@@ -15,8 +15,11 @@
     if($now > $_SESSION['expire']){
       session_destroy();
     }
+  }else{
+    header('Location: error.php?error=1');
   }
-?>
+
+  ?>
 
 <!DOCTYPE html>
 <html lang="es">
@@ -24,7 +27,7 @@
   	<title>Empleado</title>
     <!-- Para tildes y acentos -->
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-  
+    <link rel="icon" href="src/favicon.ico" type="image/ico">
     <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Michroma" rel="stylesheet">
@@ -102,7 +105,7 @@ echo
   </tr>
 
   <tr class='detalles'>
-    <td id='imagen' rowspan='11'><img src=$rutaImagen width=150 height=150></img></td>
+    <td id='imagen' rowspan='13'><img src=$rutaImagen width=150 height=150></img></td>
     <td class='detalles'><b>Nombre completo<b></td>
     <td class='detalles'>$emp[nombreCompleto]</td>
   </tr>
@@ -124,7 +127,15 @@ echo
     <td class='detalles'>$loc</td>
   </tr>
   <tr class='detalles'>
-    <td class='detalles'><b>Telefono</b></td>
+    <td class='detalles'><b>Sueldo</b></td>
+    <td class='detalles'>$emp[sueldo] <b>€/año</b></td>
+  </tr>
+  <tr class='detalles'>
+    <td class='detalles'><b>Aumento</b></td>
+    <td class='detalles'>$emp[incremento] %</td>
+  </tr>
+  <tr class='detalles'>
+  <td class='detalles'><b>Telefono</b></td>
     <td class='detalles'>$emp[telefono]</td>
   </tr>
   <tr class='detalles'>

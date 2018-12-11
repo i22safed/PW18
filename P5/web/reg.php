@@ -8,6 +8,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
   
     <link rel="stylesheet" href="design.css" type="text/css">
+    <link rel="icon" href="src/favicon.ico" type="image/ico">
     <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Michroma" rel="stylesheet">
@@ -60,3 +61,6 @@
 
 
 </form>
+</body>
+
+</html>

@@ -3,7 +3,8 @@
   include('session.php');
   
   if(isset($_SESSION['usuario'])){
-    echo "Sesión inciada como ".$_SESSION['usuario'];
+    $nombreSesion = $_SESSION['usuario'];
+    $rol = $_SESSION['rol'];
     $sesion = 1;
   }else{
     $sesion = 0;
@@ -33,6 +34,7 @@
   	<title>Insertar empleado</title>
     <!-- Para tildes y acentos -->
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="icon" href="src/favicon.ico" type="image/ico">
     <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Michroma" rel="stylesheet">
@@ -45,6 +47,23 @@
     <h1 class='insertar'>
         <br>Empleado
     </h1>
+
+    <?php 
+        if($sesion==1){
+
+        if (strcmp($rol,'Admin')==0){
+            // Futuramente incluir en nombre de sesión un enlace al panel de control
+            echo"<p class='log'> 
+                <br>Has iniciado sesión como <b>$nombreSesion</b> ($rol)
+            <p>";
+        }else{
+            echo"<p class='log'> 
+                <br>Has iniciado sesión como <b>$nombreSesion</b>
+            <p>";
+            }
+        }
+    ?>
+
     <h3 class='insertar'>
         <br><br>Inserte los datos del empleado en los campos<br><br><br> 
     </h3>
@@ -181,4 +200,6 @@
 
     </form>
   </body>
+
+  
 </html>

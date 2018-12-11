@@ -1,4 +1,3 @@
-Create database Empleados;
 use Empleados;
 
 
@@ -28,9 +27,9 @@ values (44826745,'44826745.png','Pedro Jimenez Santos','Hombre','Basicos','00000
 insert into empleados
 values (30725352,'30725352.png','Marta Sanchez Rodriguez','Mujer','Ninguno','0000000','Parado','11100','0','martita00@hotmail.com',1,'1987-01-05',654825492);
 insert into empleados
-values (45245264,'45245264.png','Ana María Expósito Escudero','Mujer','Superiores','0000000','Activo','15000','0','expositoeam@yahoo.es',5,'1955-07-11',692547885);
+values (45245264,'45245264.png','Ana María Exposito Escudero','Mujer','Superiores','0000000','Activo','15000','0','expositoeam@yahoo.es',5,'1955-07-11',692547885);
 insert into empleados
-values (31075940,'31075940.png','Alberto Nuñez Fernandez','Hombre','Basicos','0000000','Jubilado','49000','0','anfernandez@outlook.com',1,'1948-05-10',666350983);
+values (31075940,'31075940.png','Alberto Nunez Fernandez','Hombre','Basicos','0000000','Jubilado','49000','0','anfernandez@outlook.com',1,'1948-05-10',666350983);
 insert into empleados
 values (45374737,'45374737.png','Carolina Lopez Muriel','Mujer','Basicos','0000000','Activo','100000','0','karolop90@hotmail.com',5,'1964-11-12',643176224);
 insert into empleados

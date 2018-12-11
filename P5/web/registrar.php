@@ -17,26 +17,28 @@ if(empty($uo->dbc)){
 
 
 if(strcmp($opcion,'Registrar')==0){
-
-    if($uo->checkDNI($dni)==false){
+    
+    if($uo->checkDNI($dni)==true){
+    }else{
         header('Location: error.php?error=8');
     }
-
-    if($uo->checkUserExist($usuario)==false){
+    
+    if($uo->checkDNIDBU($dni)==true){
+    }else{
+        header('Location: error.php?error=14');
+    }
+    
+    if($uo->checkDNIDBE($dni)==true){
+        header('Location: error.php?error=13');
+    }
+    
+    if($uo->checkUserName($usuario)==true){
+        $uo->registerUser($usuario,$pass,$dni);
+        header('Location: error.php?error=10');
+    }else{
         header('Location: error.php?error=9');
     }
 
-    if($uo->checkPass($pass)==false){
-        header('Location: error.php?error=7');
-    }
-
-    if($uo->registerUser($usuario,$pass,$dni)==true){
-        header('Location: error.php?error=10');
-    }
-    else{
-        header('Location: error.php?error=11');
-    }
-    
 }else{
     
     header('Location: empleados.php');

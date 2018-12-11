@@ -95,23 +95,3 @@
 
 
 
-<!--
-  
-  
-  <input class="input" type="submit" name="opcion" value="Cancelar"> 
-      <table class='eliminar'>
-          <tr>
-            <th ><p><br>¿Es correcto el dni del empleado que desea borrar?</p></th>
-          </tr>
-          <tr>
-            <th ><input class="input" type="text" name="dni" value=<?php echo "$_GET[dni]" ?>></th>
-          </tr>
-          <tr>
-            <input class="input" type="submit" name="opcion" value="Eliminar"></td>
-            <td <input class="input" type="submit" name="opcion" value="Cancelar"></td>
-          </tr>
-      </table>
-
-
-
--->

@@ -75,13 +75,13 @@ class empQueries{
   } // Fin guardarInfo()
 
   public function editarInfo($dni, $imagen, $nombreCompleto, $sexo, $estudiosSuperiores,
-	$certificaciones, $situacionLaboral, $email, $localidad, $fechaNacimiento, $telefono){
+	$certificaciones, $situacionLaboral, $sueldo, $incremento, $email, $localidad, $fechaNacimiento, $telefono){
  
     $sentence = $this->dbc->prepare("UPDATE empleados 
     SET dni='$dni', imagen='$imagen', nombreCompleto='$nombreCompleto', sexo='$sexo', 
     estudiosSuperiores='$estudiosSuperiores', certificaciones='$certificaciones', 
-    situacionLaboral='$situacionLaboral', email='$email', localidad='$localidad', 
-    fechaNacimiento='$fechaNacimiento', telefono='$telefono' 
+    situacionLaboral='$situacionLaboral',sueldo=$sueldo, incremento=$incremento, email='$email',
+    localidad='$localidad', fechaNacimiento='$fechaNacimiento', telefono='$telefono' 
     WHERE dni = '$dni';");
 
     if($sentence->execute()){
@@ -330,6 +330,25 @@ class empQueries{
     }
   } // Fin de loc2Array
 
+  public function getIncEmp(){ // Observador de todos los empleados 
+
+    $empleados = array();
+    $i = 0;
+    $sentence = $this->dbc->prepare("SELECT * FROM empleados WHERE empleados.incremento != 0");
+
+    if($sentence->execute()){
+      while ($row = $sentence->fetch()){
+        $empleados[$i] = $row;
+        $i++;
+      }
+    }
+    
+    if($i != 0 ){
+      return $empleados;
+    }else{
+      return 0; 
+    }
+  }   // Fin get getIncEmp()
 
 } // Fin empQueries()
 
